@@ -1,21 +1,24 @@
 
-// import klarConfig from './config.json';
-import Hero from "./blocks/Hero.js";
+import klarConfig from './config.json';
+import Hero from "./blocks/hero.js";
+import Team from "./blocks/team";
 
 const klarComponents = {
   Hero: Hero,
+  Team: Team,
 };
 
 window.klarComponents = klarComponents;
 console.log(window.klarComponents);
-// window.klarComponents['Hero']();
-
 
 ReactDOM.createRoot(
   document.body,
 ).render(
   <React.StrictMode>
-    <Hero />
+    <>
+      <Hero />
+      <Team />
+    </>
   </React.StrictMode>,
 );
 
