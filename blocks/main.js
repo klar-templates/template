@@ -1,7 +1,7 @@
 
-import klarConfig from './config.json';
-import Hero from "./blocks/hero.js";
-import Team from "./blocks/team";
+import klarConfig from '../config.json';
+import Hero from "./hero";
+import Team from "./team";
 
 const klarComponents = {
   Hero: Hero,
@@ -13,6 +13,7 @@ window.klarComponentsConfig = klarConfig;
 console.log(window.klarComponents);
 
 // const blocks = klarConfig.data_defaults.blocks;
+console.log(klarConfig)
 
 ReactDOM.createRoot(
   document.body,
