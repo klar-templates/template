@@ -1,3 +1,3 @@
-function Hero() {
-  return <h1>Hehe hehe</h1>;
+export default function Hero() {
+  return <h1>Det här är ett hero-block.</h1>;
 }

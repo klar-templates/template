@@ -1,6 +1,6 @@
 
 // import klarConfig from './config.json';
-// import Hero from "./blocks/Hero";
+import Hero from "./blocks/Hero.js";
 
 const klarComponents = {
   Hero: Hero,
@@ -8,16 +8,16 @@ const klarComponents = {
 
 window.klarComponents = klarComponents;
 console.log(window.klarComponents);
-window.klarComponents['Hero']();
+// window.klarComponents['Hero']();
 
 
-// ReactDOM.createRoot(
-//   document.getElementById('root'),
-// ).render(
-//   <React.StrictMode>
-//     <Hero />
-//   </React.StrictMode>,
-// );
+ReactDOM.createRoot(
+  document.body,
+).render(
+  <React.StrictMode>
+    <Hero />
+  </React.StrictMode>,
+);
 
 
 // window.klarComponentsConfig = klarConfig;
