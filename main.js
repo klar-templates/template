@@ -9,7 +9,10 @@ const klarComponents = {
 };
 
 window.klarComponents = klarComponents;
+window.klarComponentsConfig = klarConfig;
 console.log(window.klarComponents);
+
+// const blocks = klarConfig.data_defaults.blocks;
 
 ReactDOM.createRoot(
   document.body,
@@ -21,18 +24,3 @@ ReactDOM.createRoot(
     </>
   </React.StrictMode>,
 );
-
-
-// window.klarComponentsConfig = klarConfig;
-
-// const blocks = klarConfig.data_defaults.blocks;
-
-// export default function App() {
-//   return (
-//     <Hero
-//       {...{
-//         block: { ...blocks.hero3, _id: 'hero-123456', _type: 'hero' },
-//       }}
-//     />
-//   );
-// }
