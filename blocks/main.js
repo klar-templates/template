@@ -1,15 +1,15 @@
 
-import klarConfig from '../config.json';
+import templateConfig from '../config.json';
 import BestHero from "./hero";
 import Team from "./team";
 
-const klarComponents = {
+const templateComponents = {
   BestHero: BestHero,
   // Team: Team,
 };
 
-window.klarComponents = klarComponents;
-window.klarComponentsConfig = klarConfig;
+window.templateComponents = templateComponents;
+window.templateConfig = templateConfig;
 // console.log(window.klarComponents);
 
 // const blocks = klarConfig.data_defaults.blocks;
