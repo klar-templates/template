@@ -18,6 +18,8 @@ script.type = 'module';
 script.crossOrigin = true;
 document.querySelector('head').appendChild(script);
 
+console.log(location);
+
 // const blocks = klarConfig.data_defaults.blocks;
 // console.log(klarConfig)
 
