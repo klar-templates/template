@@ -13,12 +13,10 @@ window.templateConfig = templateConfig;
 
 // Add Klar react app script after Babel has transpiled the JSX code
 const script = document.createElement('script');
-script.src = 'http://localhost:5173/public/index.js';
+script.src = 'http://localhost:4173/assets/index.9acc3b28.js';
 script.type = 'module';
 script.crossOrigin = true;
 document.querySelector('head').appendChild(script);
-
-console.log(location);
 
 // const blocks = klarConfig.data_defaults.blocks;
 // console.log(klarConfig)
