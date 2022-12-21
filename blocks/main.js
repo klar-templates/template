@@ -1,11 +1,11 @@
 
 import templateConfig from '../config.json';
-import BestHero from "./hero";
+import Hero from "./hero";
 import Team from "./team";
 
 const templateComponents = {
-  BestHero: BestHero,
-  // Team: Team,
+  Hero: Hero,
+  Team: Team,
 };
 
 window.templateComponents = templateComponents;
