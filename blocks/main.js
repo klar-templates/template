@@ -13,7 +13,7 @@ window.klarComponentsConfig = klarConfig;
 console.log(window.klarComponents);
 
 // const blocks = klarConfig.data_defaults.blocks;
-console.log(klarConfig)
+// console.log(klarConfig)
 
 ReactDOM.createRoot(
   document.body,
