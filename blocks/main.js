@@ -10,7 +10,10 @@ const templateComponents = {
 
 window.templateComponents = templateComponents;
 window.templateConfig = templateConfig;
-// console.log(window.klarComponents);
+
+const script = document.createElement('script');
+script.src = 'http://localhost:5173/public/index.js';
+document.documentElement.appendChild(script);
 
 // const blocks = klarConfig.data_defaults.blocks;
 // console.log(klarConfig)
