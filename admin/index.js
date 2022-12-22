@@ -1,3 +1,21 @@
+initAdmin = function () {
+  const iframeWindow = frames[0];
+  const iframeDocument = frames[0].document;
+  // Add klar-pages-app script after Babel has transpiled the JSX code
+  const script = iframeDocument.createElement('script');
+  script.src = 'http://localhost:4173/assets/index.b5643cb4.js';
+  script.type = 'module';
+  script.crossOrigin = true;
+  iframeDocument.querySelector('head').appendChild(script);
+
+  iframeWindow.initTemplate = function (data) {
+    const startpage = data.data.pages[0];
+    const blocks = startpage.blocks;
+    const block1 = blocks[0];
+    const block2 = blocks[1];
+  }
+}
+
 const iframe = document.querySelector('.js-iframe');
 const desktop = document.querySelector('.js-desktop');
 const ipad = document.querySelector('.js-ipad');
