@@ -47,3 +47,8 @@ body {
 .iframe.mobile {
   width: 768px;
 }
+
+.breakpoints .active {
+  background-color: rgba(229,229,229,1);
+  
+}
