@@ -11,8 +11,8 @@ const templateComponents = {
 window.templateComponents = templateComponents;
 window.templateConfig = templateConfig;
 
-if (parent.frames.initAdmin) {
-  parent.frames.initAdmin();
+if (parent.frames.initEditor) {
+  parent.frames.initEditor();
 } else {
   // Add klar-pages-app script after Babel has transpiled the JSX code
   const script = document.createElement('script');
