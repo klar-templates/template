@@ -1,15 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="icon" href="#" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Template - Admin</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/admin/index.css" />
-  </head>
-  <body>
+initAdmin = function () {
+  const iframeWindow = frames[0];
+  const iframeDocument = frames[0].document;
+  // Add klar-pages-app script after Babel has transpiled the JSX code
+  const script = iframeDocument.createElement('script');
+  script.src = 'http://localhost:4173/assets/index.b5643cb4.js';
+  script.type = 'module';
+  script.crossOrigin = true;
+  iframeDocument.querySelector('head').appendChild(script);
+
+  iframeWindow.initTemplate = function (data) {
+    const startpage = data.data.pages[0];
+    const blocks = startpage.blocks;
+    const block1 = blocks[0];
+    const block2 = blocks[1];
+  }
+}
+
+function setEvents() {
+  const iframe = document.querySelector('.js-iframe');
+  const desktop = document.querySelector('.js-desktop');
+  const ipad = document.querySelector('.js-ipad');
+  const mobile = document.querySelector('.js-mobile');
+
+  function clearBreakpoints() {
+    iframe.classList.remove('desktop');
+    iframe.classList.remove('ipad');
+    iframe.classList.remove('mobile');
+    desktop.classList.remove('active');
+    ipad.classList.remove('active');
+    mobile.classList.remove('active');
+  }
+
+  desktop.addEventListener('click', (e) => {if((window.innerWidth - 260) < 1280) {clearBreakpoints();return};if(iframe.classList.contains('desktop')) {clearBreakpoints();} else {clearBreakpoints();iframe.classList.add('desktop');e.target.classList.add('active');}});
+  ipad.addEventListener('click', (e) => {if((window.innerWidth - 260) < 1024) {clearBreakpoints();return};if(iframe.classList.contains('ipad')) {clearBreakpoints();} else {clearBreakpoints();iframe.classList.add('ipad');e.target.classList.add('active');}});
+  mobile.addEventListener('click', (e) => {if((window.innerWidth - 260) < 768) {clearBreakpoints();return};if(iframe.classList.contains('mobile')) {clearBreakpoints();} else {clearBreakpoints();iframe.classList.add('mobile');e.target.classList.add('active');}});
+}
+
+function addHtml() {
+  const adminHtml = `
     <div class="layout">
       <aside class="sidebar p-4">
         <h1 class="text-2xl font-semibold text-neutral-700">Edit blocks</h1>
@@ -34,7 +62,22 @@
         <iframe class="iframe js-iframe transition-[width] shadow-lg" src="/"></iframe>
       </main>
     </div>
-    <script src="admin/index.js"></script>
-  </body>
-</html>
+  `;
+  document.body.append(new DOMParser().parseFromString(adminHtml, 'text/html').querySelector('.layout'));
+}
 
+function addCss() {
+  const link = document.createElement('link');
+  link.href = '/editor/index.css';
+  link.rel = 'stylesheet';
+  document.querySelector('head').appendChild(link);
+}
+
+function setHead() {
+  document.title = 'Klar Template Editor'  
+}
+
+setHead();
+addCss();
+addHtml();
+setEvents();
