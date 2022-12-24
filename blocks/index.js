@@ -1,10 +1,10 @@
 
-import Hero from "./hero";
-import Team from "./team";
+import hero from "./hero";
+import team from "./team";
 
 const templateComponents = {
-  Hero: Hero,
-  Team: Team,
+  TemplateEditorHero: hero,
+  TemplateEditorTeam: team,
 };
 
 window.templateComponents = templateComponents;
