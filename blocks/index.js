@@ -8,3 +8,4 @@ const templateComponents = {
 };
 
 window.templateComponents = templateComponents;
+// console.log(window.templateComponents);
