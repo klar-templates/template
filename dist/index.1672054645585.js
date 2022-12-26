@@ -1,4 +1,4 @@
-function TemplateEditorHero() {
+(function TemplateEditorHero() {
   const Section = KlarComponents.Section;
   const Container = KlarComponents.Container;
   const Button = KlarComponents.Button;
@@ -31,3 +31,11 @@ function TemplateEditorHero() {
     "aria-hidden": "true"
   }, "\u2192"))))));
 }
+import TemplateHero from "./TemplateHero";
+import TemplateTeam from "./TemplateTeam";
+const templateComponents = {
+  TemplateHero: TemplateHero,
+  TemplateTeam: TemplateTeam
+};
+window.templateComponents = templateComponents;
+// console.log(window.templateComponents);)()
