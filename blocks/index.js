@@ -4,7 +4,7 @@ import TemplateTeam from './TemplateTeam';
 
 const templateComponents = {
   TemplateHero: TemplateHero,
-  TemplateTeam: TemplateTeam,
+  // TemplateTeam: TemplateTeam,
 };
 
 window.templateComponents = templateComponents;

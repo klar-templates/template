@@ -33,9 +33,10 @@ function TemplateHero() {
   }, "\u2192"))))));
 }
 const templateComponents = {
-  TemplateHero: TemplateHero,
-  TemplateTeam: TemplateTeam
+  TemplateHero: TemplateHero
+  // TemplateTeam: TemplateTeam,
 };
+
 window.templateComponents = templateComponents;
 // console.log(window.templateComponents);
 })();
