@@ -1,4 +1,4 @@
-(function TemplateEditorHero() {
+(function TemplateHero() {
   const Section = KlarComponents.Section;
   const Container = KlarComponents.Container;
   const Button = KlarComponents.Button;

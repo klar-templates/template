@@ -1,4 +1,4 @@
-export default function TemplateEditorHero() {
+export default function TemplateHero() {
   const Section = KlarComponents.Section;
   const Container = KlarComponents.Container;
   const Button = KlarComponents.Button;
