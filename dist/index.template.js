@@ -10,7 +10,6 @@ function TemplateHero(props) {
     Button,
     Link
   } = props.ui;
-  console.log('props', props.ui);
   return /*#__PURE__*/React.createElement(Section, {
     className: "bg-slate-900 text-on-background"
   }, /*#__PURE__*/React.createElement(Container, null, /*#__PURE__*/React.createElement("div", {

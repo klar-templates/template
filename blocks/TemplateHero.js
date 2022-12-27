@@ -1,7 +1,6 @@
 export default function TemplateHero(props) {
   const {title, subtitle} = props.block;
   const {Section, Container, Button, Link} = props.ui;
-  console.log('props', props.ui);
   return (
     <Section className="bg-slate-900 text-on-background">
       <Container>
