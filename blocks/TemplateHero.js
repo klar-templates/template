@@ -1,4 +1,4 @@
-export default function TemplateHero({heading}) {
+export default function TemplateHero(props) {
   const {title, subtitle} = props.block;
   const {Section, Container, Button, Link} = props.ui;
   console.log('props', props.ui);
