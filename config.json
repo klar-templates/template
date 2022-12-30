@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "block_types": [
     {
-      "title": "Hero",
+      "title": "Hero - React",
       "name": "TemplateHero",
       "icon": "image",
       "type": "object",
@@ -70,7 +70,7 @@
       ]
     },
     {
-      "title": "Hero",
+      "title": "Team - React",
       "name": "TemplateTeam",
       "icon": "image",
       "type": "object",
@@ -88,7 +88,7 @@
       ]
     },
     {
-      "title": "Team",
+      "title": "Team - Nunjucks",
       "name": "temp-team",
       "icon": "group",
       "template_engine": "nunjucks"
