@@ -91,7 +91,23 @@
       "title": "Team - Nunjucks",
       "name": "temp-team",
       "icon": "group",
-      "template_engine": "nunjucks"
+      "template_engine": "nunjucks",
+      "fields": [
+        {
+          "title": "Style",
+          "name": "style",
+          "type": "object",
+          "fields": [
+            {
+              "type": "integer",
+              "name": "margin_bottom",
+              "title": "Push up content",
+              "minimum": -100,
+              "maximum": 0
+            }
+          ]
+        }
+      ]
     }
   ],
   "data_defaults": {
