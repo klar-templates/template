@@ -89,7 +89,7 @@
     },
     {
       "title": "Team",
-      "name": "team",
+      "name": "temp-team",
       "icon": "group",
       "template_engine": "nunjucks",
       "fields": [
@@ -141,7 +141,7 @@
       "TemplateTeam": {
         "title": "Create an account and start making your own web sites"
       },
-      "team": {
+      "temp-team": {
         "heading": "Our Amazing Team",
         "sub_heading": "Lorem ipsum dolor sit amet consectetur.",
         "team": [
