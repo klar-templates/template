@@ -91,24 +91,7 @@
       "title": "Team",
       "name": "temp-team",
       "icon": "group",
-      "template_engine": "nunjucks",
-      "fields": [
-        {
-          "type": "string",
-          "name": "heading",
-          "title": "Rubrik" 
-        },
-        {
-          "type": "string",
-          "name": "sub_heading",
-          "title": "Underrubrik" 
-        },
-        {
-          "type": "array",
-          "name": "team",
-          "title": "Team"
-        }
-      ]
+      "template_engine": "nunjucks"
     }
   ],
   "data_defaults": {
