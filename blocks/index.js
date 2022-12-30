@@ -7,5 +7,5 @@ const templateComponents = {
   // TemplateTeam: TemplateTeam,
 };
 
-window.templateComponents = templateComponents;
+// window.templateComponents = templateComponents;
 // console.log(window.templateComponents);

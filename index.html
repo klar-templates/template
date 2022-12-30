@@ -7,15 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Template</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="http://localhost:4173/assets/index.9d202c10.css" />
+    <link rel="stylesheet" href="http://localhost:4173/assets/index.7d5d8db6.css" />
+    <script>
+      tailwind.config = {
+        corePlugins: {
+          preflight: false,
+        }
+      }
+    </script>
+    <style type="text/tailwindcss">
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
+
+      @layer base {
+        
+      }
+      
+      @layer utilities {
+        
+      }
+    </style>
   </head>
   <body class="bg-background m-0">
     <div id="root"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.20.2/babel.min.js"></script>
-    <script data-plugins="transform-modules-umd" type="text/babel" src="blocks/TemplateHero.js"></script>
-    <script data-plugins="transform-modules-umd" type="text/babel" src="blocks/TemplateTeam.js"></script>
-    <script data-plugins="transform-modules-umd" type="text/babel" src="blocks/index.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/klar-templates/template-editor@latest/site/index.js"></script>
+    <!-- <script data-plugins="transform-modules-umd" type="text/babel" src="blocks/TemplateHero.js"></script> -->
+    <!-- <script data-plugins="transform-modules-umd" type="text/babel" src="blocks/TemplateTeam.js"></script> -->
+    <!-- <script data-plugins="transform-modules-umd" type="text/babel" src="blocks/index.js"></script> -->
+    <script src="http://localhost:5501/site/index.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/klar-templates/template-editor@latest/site/index.js"></script> -->
   </body>
 </html>
 
