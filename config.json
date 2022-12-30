@@ -94,6 +94,11 @@
       "template_engine": "nunjucks",
       "fields": [
         {
+          "title": "Rubrik",
+          "name": "title",
+          "type": "string"
+        },
+        {
           "title": "Style",
           "name": "style",
           "type": "object",
