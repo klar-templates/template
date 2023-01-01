@@ -110,8 +110,9 @@
           "type": "array",
           "items": {
             "title": "Team member",
+            "type": "object",
             "display_field": "heading",
-            "fields": [
+            "of": [
               {
                 "title": "Bild",
                 "name": "image",
