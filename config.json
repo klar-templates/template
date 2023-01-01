@@ -108,24 +108,29 @@
           "type": "array",
           "name": "team",
           "title": "Team",
-          "fields": [
-            {
-              "title": "Bild",
-              "name": "image",
-              "type": "string",
-              "format": "file"
-            },
-            {
-              "title": "Rubrik",
-              "name": "heading",
-              "type": "string"
-            },
-            {
-              "type": "text",
-              "name": "text",
-              "title": "Text"
-            }
-          ]
+          "items": {
+            "type": "object",
+            "title": "Team member",
+            "display_field": "heading",
+            "fields": [
+              {
+                "title": "Bild",
+                "name": "image",
+                "type": "string",
+                "format": "file"
+              },
+              {
+                "title": "Rubrik",
+                "name": "heading",
+                "type": "string"
+              },
+              {
+                "title": "Text",
+                "name": "text",
+                "type": "text"
+              }
+            ]
+          }
         },
         {
           "type": "text",
