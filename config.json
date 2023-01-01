@@ -105,11 +105,10 @@
           "title": "Underrubrik" 
         },
         {
-          "type": "array",
-          "name": "team",
           "title": "Team",
+          "name": "team",
+          "type": "array",
           "items": {
-            "type": "object",
             "title": "Team member",
             "display_field": "heading",
             "fields": [
