@@ -150,7 +150,7 @@
         "sub_heading": "Lorem ipsum dolor sit amet consectetur.",
         "team": [
           {
-            "image": "https://raw.githubusercontent.com/klar-templates/agency/master/img/team/1.jpg",
+            "image": "https://startbootstrap.github.io/startbootstrap-agency/assets/img/team/1.jpg",
             "heading": "Kay Garland",
             "text": "Lead Designer",
             "social_links": [
@@ -172,7 +172,7 @@
             ]
           },
           {
-            "image": "https://raw.githubusercontent.com/klar-templates/agency/master/img/team/2.jpg",
+            "image": "https://startbootstrap.github.io/startbootstrap-agency/assets/img/team/2.jpg",
             "heading": "Larry Parker",
             "text": "Lead Marketer",
             "social_links": [
@@ -194,7 +194,7 @@
             ]
           },
           {
-            "image": "https://raw.githubusercontent.com/klar-templates/agency/master/img/team/3.jpg",
+            "image": "https://startbootstrap.github.io/startbootstrap-agency/assets/img/team/3.jpg",
             "heading": "Diana Pertersen",
             "text": "Lead Developer",
             "social_links": [

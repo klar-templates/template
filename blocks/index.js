@@ -6,6 +6,3 @@ const templateComponents = {
   TemplateHero: TemplateHero,
   TemplateTeam: TemplateTeam,
 };
-
-// window.templateComponents = templateComponents;
-// console.log(window.templateComponents);
