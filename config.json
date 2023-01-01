@@ -123,52 +123,7 @@
             {
               "type": "text",
               "name": "text",
-              "title": "Text",
-              "default": "En kortare text"
-            },
-            {
-              "title": "Social links",
-              "name": "social_links",
-              "type": "array",
-              "default": [
-                {
-                  "title": "Twitter",
-                  "icon": "twitter",
-                  "link": "#youraccount"
-                },
-                {
-                  "title": "Facebook",
-                  "icon": "facebook",
-                  "link": "#youraccount"
-                },
-                {
-                  "title": "Instagram",
-                  "icon": "instagram",
-                  "link": "#youraccount"
-                }
-              ],
-              "fields": [
-                {
-                  "title": "Titel",
-                  "name": "title",
-                  "type": "string",
-                  "default": "Titel"
-                },
-                {
-                  "title": "Ikon",
-                  "name": "icon",
-                  "type": "string",
-                  "default": "twitter",
-                  "ui:widget": "icon"
-                },
-                {
-                  "title": "Länk",
-                  "name": "link",
-                  "type": "string",
-                  "format": "uri",
-                  "default": "#youraccount"
-                }
-              ]
+              "title": "Text"
             }
           ]
         },
