@@ -3,6 +3,127 @@
   "version": "0.0.0",
   "block_types": [
     {
+      "title": "Team - Nunjucks",
+      "name": "temp-team",
+      "icon": "group",
+      "template_engine": "nunjucks",
+      "type": "object",
+      "fields": [
+        {
+          "title": "Rubrik",
+          "name": "heading",
+          "type": "string"
+        },
+        {
+          "title": "Underrubrik",
+          "name": "sub_heading",
+          "type": "string"
+        },
+        {
+          "title": "Team",
+          "name": "team",
+          "type": "array",
+          "of": [
+            {
+              "title": "Team member",
+              "type": "object",
+              "display_field": "heading",
+              "fields": [
+                {
+                  "title": "Bild",
+                  "name": "image",
+                  "type": "string",
+                  "format": "file"
+                },
+                {
+                  "title": "Rubrik",
+                  "name": "heading",
+                  "type": "string"
+                },
+                {
+                  "title": "Text",
+                  "name": "text",
+                  "type": "text"
+                },
+                {
+                  "title": "Social links",
+                  "name": "social_links",
+                  "type": "array",
+                  "default": [
+                    {
+                      "title": "Twitter",
+                      "icon": "twitter",
+                      "link": "#youraccount"
+                    },
+                    {
+                      "title": "Facebook",
+                      "icon": "facebook",
+                      "link": "#youraccount"
+                    },
+                    {
+                      "title": "Instagram",
+                      "icon": "instagram",
+                      "link": "#youraccount"
+                    }
+                  ],
+                  "of": [{
+                    "title": "Länk",
+                    "name": "link",
+                    "type": "object",
+                    "display_field": "title",
+                    "fields": [
+                      {
+                        "title": "Titel",
+                        "name": "title",
+                        "type": "string",
+                        "default": "Titel"
+                      },
+                      {
+                        "title": "Ikon",
+                        "name": "icon",
+                        "type": "string",
+                        "default": "twitter",
+                        "ui:widget": "icon"
+                      },
+                      {
+                        "title": "Länk",
+                        "name": "link",
+                        "type": "string",
+                        "format": "uri",
+                        "default": "#youraccount"
+                      }
+                    ]
+                  }]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "text",
+          "title": "Text",
+          "field": {
+            "height": "120px"
+          }
+        },
+        {
+          "title": "Style",
+          "name": "style",
+          "type": "object",
+          "fields": [
+            {
+              "type": "integer",
+              "name": "margin_bottom",
+              "title": "Push up content",
+              "minimum": -100,
+              "maximum": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "Hero - React",
       "name": "TemplateHero",
       "icon": "image",
@@ -84,124 +205,6 @@
           "title": "Rubrik",
           "name": "title",
           "type": "string"
-        }
-      ]
-    },
-    {
-      "title": "Team - Nunjucks",
-      "name": "temp-team",
-      "icon": "group",
-      "template_engine": "nunjucks",
-      "type": "object",
-      "fields": [
-        {
-          "type": "string",
-          "name": "heading",
-          "title": "Rubrik" 
-        },
-        {
-          "type": "string",
-          "name": "sub_heading",
-          "title": "Underrubrik" 
-        },
-        {
-          "title": "Team",
-          "name": "team",
-          "type": "array",
-          "of": [{
-            "title": "Team member",
-            "type": "object",
-            "display_field": "heading",
-            "fields": [
-              {
-                "title": "Bild",
-                "name": "image",
-                "type": "string",
-                "format": "file"
-              },
-              {
-                "title": "Rubrik",
-                "name": "heading",
-                "type": "string"
-              },
-              {
-                "title": "Text",
-                "name": "text",
-                "type": "text"
-              },
-              {
-                "title": "Social links",
-                "name": "social_links",
-                "type": "array",
-                "default": [
-                  {
-                    "title": "Twitter",
-                    "icon": "twitter",
-                    "link": "#youraccount"
-                  },
-                  {
-                    "title": "Facebook",
-                    "icon": "facebook",
-                    "link": "#youraccount"
-                  },
-                  {
-                    "title": "Instagram",
-                    "icon": "instagram",
-                    "link": "#youraccount"
-                  }
-                ],
-                "of": [{
-                  "title": "Länk",
-                  "name": "link",
-                  "type": "object",
-                  "display_field": "title",
-                  "fields": [
-                    {
-                      "title": "Titel",
-                      "name": "title",
-                      "type": "string",
-                      "default": "Titel"
-                    },
-                    {
-                      "title": "Ikon",
-                      "name": "icon",
-                      "type": "string",
-                      "default": "twitter",
-                      "ui:widget": "icon"
-                    },
-                    {
-                      "title": "Länk",
-                      "name": "link",
-                      "type": "string",
-                      "format": "uri",
-                      "default": "#youraccount"
-                    }
-                  ]
-                }]
-              }   
-          ]
-        }]},
-        {
-          "type": "text",
-          "name": "text",
-          "title": "Text",
-          "field": {
-            "height": "120px"
-          }
-        },
-        {
-          "title": "Style",
-          "name": "style",
-          "type": "object",
-          "fields": [
-            {
-              "type": "integer",
-              "name": "margin_bottom",
-              "title": "Push up content",
-              "minimum": -100,
-              "maximum": 0
-            }
-          ]
         }
       ]
     }
