@@ -1,4 +1,6 @@
 (function () {
+console.log('Jag heter Gabriel Lantz');
+
 function TemplateHero(props) {
   const {
     title,
