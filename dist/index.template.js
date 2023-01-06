@@ -1,5 +1,5 @@
 (function () {
-console.log('Jag heter Gabriel Lantz');
+window.templateJs = "console.log('Jag heter Gabriel Lantz');";
 
 function TemplateHero(props) {
   const {
