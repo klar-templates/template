@@ -260,6 +260,48 @@
           "type": "string"
         }
       ]
+    },
+    {
+      "title": "Footer",
+      "name": "FooterTemplate",
+      "icon": "address-card-o",
+      "hidden": false,
+      "global": true,
+      "type": "object",
+      "fields": [
+        {
+          "title": "title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Beskrivning",
+          "name": "description",
+          "type": "text"
+        },
+        {
+          "title": "Style",
+          "name": "style",
+          "type": "object",
+          "fields": [
+            {
+              "title": "title",
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "title": "Beskrivning",
+              "name": "description",
+              "type": "text"
+            },
+            {
+              "title": "Style",
+              "name": "style",
+              "type": "object"
+            }
+          ]
+        }
+      ]
     }
   ],
   "data_defaults": {
@@ -393,6 +435,49 @@
       },
       "TemplateTeam": {
         "title": "Create an account and start making your own web sites"
+      },
+      "FooterTemplate": {
+        "copyright_text": "Copyright &copy; Your Website 2022",
+        "social_links": [
+          {
+            "title": "Twitter",
+            "icon": "twitter",
+            "link": "#youraccount"
+          },
+          {
+            "title": "Facebook",
+            "icon": "facebook",
+            "link": "#youraccount"
+          },
+          {
+            "title": "Instagram",
+            "icon": "instagram",
+            "link": "#youraccount"
+          },
+          {
+            "title": "LinkedIn",
+            "icon": "linkedin",
+            "link": "#youraccount"
+          }
+        ],
+        "quick_links": [
+          {
+            "title": "Privacy Policy",
+            "link": ""
+          },
+          {
+            "title": "Terms of Use",
+            "link": ""
+          }
+        ],
+        "style": {
+          "block": {
+            "bg_color": "{{theme.colors.bg_color}}",
+            "social_links_hover_bg_color": "{{theme.colors.primary_color}}",
+            "padding_top": 25,
+            "padding_bottom": 25
+          }
+        }
       }
     }
   }
