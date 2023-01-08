@@ -135,7 +135,6 @@
       .mx-auto{margin-left:auto;margin-right:auto}
       .mt-12{margin-top:3rem}
       .mb-2{margin-bottom:0.5rem}
-      .mt-2{margin-top:0.5rem}
       .mt-4{margin-top:1rem}
       .mt-6{margin-top:1.5rem}
       .mt-8{margin-top:2rem}
@@ -143,6 +142,7 @@
       .mb-4{margin-bottom:1rem}
       .mb-8{margin-bottom:2rem}
       .mr-4{margin-right:1rem}
+      .mt-2{margin-top:0.5rem}
       .block{display:block}
       .flex{display:flex}
       .inline-flex{display:inline-flex}
@@ -156,8 +156,8 @@
       .w-6{width:1.5rem}
       .w-48{width:12rem}
       .w-full{width:100%}
-      .max-w-7xl{max-width:80rem}
       .max-w-2xl{max-width:42rem}
+      .max-w-7xl{max-width:80rem}
       .max-w-3xl{max-width:48rem}
       .flex-shrink-0{flex-shrink:0}
       .flex-grow{flex-grow:1}
@@ -182,8 +182,8 @@
       .p-2\.5{padding:0.625rem}
       .p-2{padding:0.5rem}
       .py-6{padding-top:1.5rem;padding-bottom:1.5rem}
-      .px-4{padding-left:1rem;padding-right:1rem}
       .py-20{padding-top:5rem;padding-bottom:5rem}
+      .px-4{padding-left:1rem;padding-right:1rem}
       .py-32{padding-top:8rem;padding-bottom:8rem}
       .py-3{padding-top:0.75rem;padding-bottom:0.75rem}
       .pb-32{padding-bottom:8rem}
@@ -200,10 +200,10 @@
       .font-semibold{font-weight:600}
       .font-medium{font-weight:500}
       .uppercase{text-transform:uppercase}
-      .leading-7{line-height:1.75rem}
       .leading-8{line-height:2rem}
       .leading-\[1\.312rem\]{line-height:1.312rem}
       .leading-tight{line-height:1.25}
+      .leading-7{line-height:1.75rem}
       .tracking-tight{letter-spacing:-0.025em}
       .text-primary{--tw-text-opacity:1;color:rgb(var(--primary-500) / var(--tw-text-opacity))}
       .text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity))}
@@ -230,9 +230,9 @@
 
       .focus-visible\:ring-2:focus-visible{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}
 
-      .dark .dark\:bg-neutral-900{--tw-bg-opacity:1;background-color:rgb(var(--neutral-900) / var(--tw-bg-opacity))}
-
       .dark .dark\:bg-neutral-800{--tw-bg-opacity:1;background-color:rgb(var(--neutral-800) / var(--tw-bg-opacity))}
+
+      .dark .dark\:bg-neutral-900{--tw-bg-opacity:1;background-color:rgb(var(--neutral-900) / var(--tw-bg-opacity))}
 
       .dark .dark\:text-primary{--tw-text-opacity:1;color:rgb(var(--primary-500) / var(--tw-text-opacity))}
 
@@ -250,8 +250,8 @@
 .sm\:mb-0{margin-bottom:0px}
 .sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}
 .sm\:justify-center{justify-content:center}
-.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}
 .sm\:py-32{padding-top:8rem;padding-bottom:8rem}
+.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}
 .sm\:px-16{padding-left:4rem;padding-right:4rem}
 .sm\:py-4{padding-top:1rem;padding-bottom:1rem}
 .sm\:pt-40{padding-top:10rem}

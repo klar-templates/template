@@ -3,11 +3,78 @@
   "version": "0.0.0",
   "block_types": [
     {
-      "title": "Team - Nunjucks",
+      "title": "Hero",
+      "name": "TemplateHero",
+      "icon": "image",
+      "type": "object",
+      "fields": [
+        {
+          "title": "Lead in",
+          "name": "subtitle",
+          "type": "string"
+        },
+        {
+          "title": "Rubrik",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Länktext",
+          "name": "link_text",
+          "type": "string"
+        },
+        {
+          "title": "Länk",
+          "name": "link",
+          "type": "string",
+          "format": "uri"
+        },
+        {
+          "title": "Bild",
+          "name": "image",
+          "type": "string",
+          "format": "file"
+        },
+        {
+          "title": "Show lead in",
+          "name": "show_subtitle",
+          "type": "boolean",
+          "ui:widget": "switch"
+        },
+        {
+          "title": "Show title",
+          "name": "show_title",
+          "type": "boolean",
+          "ui:widget": "switch"
+        },
+        {
+          "title": "Show button",
+          "name": "show_button",
+          "type": "boolean",
+          "ui:widget": "switch"
+        },
+        {
+          "title": "Style",
+          "name": "style",
+          "type": "object",
+          "fields": [
+            {
+              "type": "integer",
+              "name": "margin_bottom",
+              "title": "Push up content",
+              "minimum": -100,
+              "maximum": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Team",
       "name": "team-template",
       "icon": "group",
-      "template_engine": "nunjucks",
       "type": "object",
+      "template_engine": "nunjucks",
       "fields": [
         {
           "title": "Rubrik",
@@ -124,7 +191,7 @@
       ]
     },
     {
-      "title": "Services - Nunjucks",
+      "title": "Services",
       "name": "services-template",
       "icon": "file-text-o",
       "ui:css_selector": "#services",
@@ -177,74 +244,7 @@
       ]  
     },
     {
-      "title": "Hero - React",
-      "name": "TemplateHero",
-      "icon": "image",
-      "type": "object",
-      "fields": [
-        {
-          "title": "Lead in",
-          "name": "subtitle",
-          "type": "string"
-        },
-        {
-          "title": "Rubrik",
-          "name": "title",
-          "type": "string"
-        },
-        {
-          "title": "Länktext",
-          "name": "link_text",
-          "type": "string"
-        },
-        {
-          "title": "Länk",
-          "name": "link",
-          "type": "string",
-          "format": "uri"
-        },
-        {
-          "title": "Bild",
-          "name": "image",
-          "type": "string",
-          "format": "file"
-        },
-        {
-          "title": "Show lead in",
-          "name": "show_subtitle",
-          "type": "boolean",
-          "ui:widget": "switch"
-        },
-        {
-          "title": "Show title",
-          "name": "show_title",
-          "type": "boolean",
-          "ui:widget": "switch"
-        },
-        {
-          "title": "Show button",
-          "name": "show_button",
-          "type": "boolean",
-          "ui:widget": "switch"
-        },
-        {
-          "title": "Style",
-          "name": "style",
-          "type": "object",
-          "fields": [
-            {
-              "type": "integer",
-              "name": "margin_bottom",
-              "title": "Push up content",
-              "minimum": -100,
-              "maximum": 0
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Team - React",
+      "title": "Team",
       "name": "TemplateTeam",
       "icon": "image",
       "type": "object",
