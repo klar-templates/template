@@ -6,7 +6,7 @@
       "title": "Hero",
       "name": "HeroTemplate",
       "icon": "image",
-      "hidden": true,
+      "hidden": false,
       "type": "object",
       "fields": [
         {
