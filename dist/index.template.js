@@ -161,9 +161,6 @@ function TemplateHero(props) {
     "aria-hidden": "true"
   }, "\u2192"))))));
 }
-function TemplateTeam() {
-  return /*#__PURE__*/React.createElement("h1", null, "Hehe hehe");
-}
 function FooterTemplate(props) {
   const {
     Section,
@@ -302,7 +299,6 @@ function FooterTemplate(props) {
 }
 const templateComponents = {
   TemplateHero: TemplateHero,
-  TemplateTeam: TemplateTeam,
   FooterTemplate: FooterTemplate,
   HeroTemplate: HeroTemplate
 };
