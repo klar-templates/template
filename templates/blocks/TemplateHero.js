@@ -1,4 +1,4 @@
-export default function TemplateEditorHero(props) {
+export default function TemplateHero(props) {
   const {title, subtitle} = props.block;
   const {Section, Container, Button, Link} = props.ui;
   // console.log('props', props.ui);
