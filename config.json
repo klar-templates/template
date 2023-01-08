@@ -277,14 +277,14 @@
         },
         {
           "title": "Services",
-          "name": "services",
+          "name": "items",
           "type": "array",
-          "display_field": "heading",
           "of": [
             {
               "title": "Service",
-              "name": "service",
+              "name": "item",
               "type": "object",
+              "display_field": "heading",
               "fields": [
                 {
                   "title": "Icon",
