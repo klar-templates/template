@@ -3,83 +3,6 @@
   "version": "0.0.0",
   "block_types": [
     {
-      "title": "Portfolio",
-      "name": "portfolio-template",
-      "type": "object",
-      "template_engine": "nunjucks",
-      "fields": [
-        {"title": "Title"}
-      ]
-    },
-    {
-      "title": "Hero",
-      "name": "HeroTemplate",
-      "icon": "image",
-      "hidden": false,
-      "type": "object",
-      "fields": [
-        {
-          "title": "Lead in",
-          "name": "subtitle",
-          "type": "string"
-        },
-        {
-          "title": "Rubrik",
-          "name": "title",
-          "type": "string"
-        },
-        {
-          "title": "Länktext",
-          "name": "link_text",
-          "type": "string"
-        },
-        {
-          "title": "Länk",
-          "name": "link",
-          "type": "string",
-          "format": "uri"
-        },
-        {
-          "title": "Bild",
-          "name": "image",
-          "type": "string",
-          "format": "file"
-        },
-        {
-          "title": "Show lead in",
-          "name": "show_subtitle",
-          "type": "boolean",
-          "ui:widget": "switch"
-        },
-        {
-          "title": "Show title",
-          "name": "show_title",
-          "type": "boolean",
-          "ui:widget": "switch"
-        },
-        {
-          "title": "Show button",
-          "name": "show_button",
-          "type": "boolean",
-          "ui:widget": "switch"
-        },
-        {
-          "title": "Style",
-          "name": "style",
-          "type": "object",
-          "fields": [
-            {
-              "type": "integer",
-              "name": "margin_bottom",
-              "title": "Push up content",
-              "minimum": -100,
-              "maximum": 0
-            }
-          ]
-        }
-      ]
-    },
-    {
       "title": "Hero",
       "name": "TemplateHero",
       "icon": "image",
@@ -145,6 +68,59 @@
           ]
         }
       ]
+    },
+    {
+      "title": "Services",
+      "name": "services-template",
+      "icon": "file-text-o",
+      "ui:css_selector": "#services",
+      "template_engine": "nunjucks",
+      "fields": [
+        {
+          "title": "Rubrik",
+          "name": "heading",
+          "type": "string"
+        },
+        {
+          "title": "Underrubrik",
+          "name": "sub_heading",
+          "type": "string"
+        },
+        {
+          "title": "Services",
+          "name": "items",
+          "type": "array",
+          "of": [
+            {
+              "title": "Service",
+              "name": "item",
+              "type": "object",
+              "display_field": "heading",
+              "fields": [
+                {
+                  "title": "Icon",
+                  "name": "icon",
+                  "type": "string",
+                  "ui:widget": "icon",
+                  "default": "image"
+                },
+                {
+                  "title": "Rubrik",
+                  "type": "string",
+                  "name": "heading",
+                  "default": "Rubrik"
+                },
+                {
+                  "title": "Text",
+                  "name": "text",
+                  "type": "text",
+                  "default": "En kortare text"
+                }
+              ]
+            }
+          ]
+        }      
+      ]  
     },
     {
       "title": "Team",
@@ -268,57 +244,81 @@
       ]
     },
     {
-      "title": "Services",
-      "name": "services-template",
-      "icon": "file-text-o",
-      "ui:css_selector": "#services",
+      "title": "Portfolio",
+      "name": "portfolio-template",
+      "type": "object",
       "template_engine": "nunjucks",
       "fields": [
+        {"title": "Title"}
+      ]
+    },
+    {
+      "title": "Hero",
+      "name": "HeroTemplate",
+      "icon": "image",
+      "hidden": false,
+      "type": "object",
+      "fields": [
+        {
+          "title": "Lead in",
+          "name": "subtitle",
+          "type": "string"
+        },
         {
           "title": "Rubrik",
-          "name": "heading",
+          "name": "title",
           "type": "string"
         },
         {
-          "title": "Underrubrik",
-          "name": "sub_heading",
+          "title": "Länktext",
+          "name": "link_text",
           "type": "string"
         },
         {
-          "title": "Services",
-          "name": "items",
-          "type": "array",
-          "of": [
+          "title": "Länk",
+          "name": "link",
+          "type": "string",
+          "format": "uri"
+        },
+        {
+          "title": "Bild",
+          "name": "image",
+          "type": "string",
+          "format": "file"
+        },
+        {
+          "title": "Show lead in",
+          "name": "show_subtitle",
+          "type": "boolean",
+          "ui:widget": "switch"
+        },
+        {
+          "title": "Show title",
+          "name": "show_title",
+          "type": "boolean",
+          "ui:widget": "switch"
+        },
+        {
+          "title": "Show button",
+          "name": "show_button",
+          "type": "boolean",
+          "ui:widget": "switch"
+        },
+        {
+          "title": "Style",
+          "name": "style",
+          "type": "object",
+          "fields": [
             {
-              "title": "Service",
-              "name": "item",
-              "type": "object",
-              "display_field": "heading",
-              "fields": [
-                {
-                  "title": "Icon",
-                  "name": "icon",
-                  "type": "string",
-                  "ui:widget": "icon",
-                  "default": "image"
-                },
-                {
-                  "title": "Rubrik",
-                  "type": "string",
-                  "name": "heading",
-                  "default": "Rubrik"
-                },
-                {
-                  "title": "Text",
-                  "name": "text",
-                  "type": "text",
-                  "default": "En kortare text"
-                }
-              ]
+              "type": "integer",
+              "name": "margin_bottom",
+              "title": "Push up content",
+              "minimum": -100,
+              "maximum": 0
             }
           ]
-        }      
-      ]  
+        }
+      ]
     },
     {
       "title": "Footer",
