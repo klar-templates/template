@@ -24,7 +24,7 @@ function TemplateHero(props) {
     className: "text-center mx-auto max-w-3xl px:4 sm:px-16 pb-32 pt-20 sm:pt-40 sm:pb-48 dark:text-neutral-50"
   }, /*#__PURE__*/React.createElement("h1", {
     className: "text-4xl font-bold tracking-tight sm:text-center sm:text-6xl"
-  }, title), /*#__PURE__*/React.createElement("p", {
+  }, title, "\xE5\xE4\xF6"), /*#__PURE__*/React.createElement("p", {
     className: "mt-6 text-lg leading-8 sm:text-center text-neutral-700 dark:text-neutral-200"
   }, subtitle), /*#__PURE__*/React.createElement("div", {
     className: "mt-8 flex gap-x-4 sm:justify-center"
