@@ -247,11 +247,72 @@
       "title": "Portfolio",
       "name": "portfolio-template",
       "type": "object",
-      "icon": "image",
+      "icon": "book",
       "template_engine": "nunjucks",
       "fields": [
-        {"title": "Title"}
-      ]
+        {
+          "title": "Rubrik",
+          "name": "heading",
+          "type": "string"
+        },
+        {
+          "title": "Underrubrik",
+          "name": "sub_heading",
+          "type": "string"
+        },
+        {
+          "title": "Portfolio",
+          "name": "items",
+          "type": "array",
+          "of": [
+            {
+              "title": "Portfolio item",
+              "name": "item",
+              "type": "object",
+              "display_field": "title",
+              "fields": [
+                {
+                  "title": "Titel",
+                  "name": "title",
+                  "type": "string"
+                },
+                {
+                  "title": "Text",
+                  "name": "summary",
+                  "type": "text"
+                },
+                {
+                  "title": "Text",
+                  "name": "body",
+                  "type": "text"
+                },
+                {
+                  "title": "Bild",
+                  "name": "image",
+                  "type": "string",
+                  "format": "file"
+                },
+                {
+                  "title": "Kategori",
+                  "name": "category",
+                  "type": "string"
+                },
+                {
+                  "title": "Klient",
+                  "name": "client",
+                  "type": "string"
+                },
+                {
+                  "title": "Datum",
+                  "name": "client",
+                  "type": "date",
+                  "format": "date-time"
+                }
+              ]
+            }
+          ]
+        }      
+      ]  
     },
     {
       "title": "Hero",
