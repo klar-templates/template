@@ -247,6 +247,7 @@
       "title": "Portfolio",
       "name": "portfolio-template",
       "type": "object",
+      "icon": "image",
       "template_engine": "nunjucks",
       "fields": [
         {"title": "Title"}
