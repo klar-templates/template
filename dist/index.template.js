@@ -1,249 +1,307 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="icon" href="#" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Template</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style type="text/tailwindcss">
-      @tailwind base;
-      @tailwind components;
-      @tailwind utilities;
+(function () {
+window.templateJs = "";
 
-      @layer base {
-        html {
-          font-family: var(--font-body), system-ui, -apple-system, BlinkMacSystemFont,
-            'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
-            'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-            'Noto Color Emoji';
-        }
-
-        body {
-          background-color: var(--bg-color);
-          color: rgb(var(--neutral-900));
-          font-size: var(--text-base-size)px;
-        }
-
-        .dark body {
-          color: rgb(var(--neutral-50));
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-          @apply font-bold;
-          font-family: var(--font-display), system-ui, -apple-system,
-            BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
-            'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-            'Segoe UI Symbol', 'Noto Color Emoji';
-        }
-      }
-
-      @layer components {
-        /* Block */
-        .section-padding-y {
-          @apply py-16 sm:py-24;
-        }
-
-        .section-heading {
-          @apply text-4xl;
-        }
-
-        .section-subheading {
-          @apply text-base font-medium italic mt-3;
-        }
-
-        .container-fluid {
-          @apply max-w-7xl;
-        }
-
-        /* Spacing */
-        .container-padding-x {
-          @apply px-4 sm:px-6 xl:px-8;
-        }
-
-        .grid-gap {
-          @apply gap-4 md:gap-6;
-        }
-
-        .flex-gap {
-          @apply gap-2 md:gap-4;
-        }
-
-        /* Button */
-        .btn {
-          @apply pl-6 px-6 h-10 font-normal text-base rounded-lg leading-[1.313rem] inline-flex items-center relative overflow-hidden transition duration-[400ms] transition-[background];
-        }
-
-        .btn-text {
-          @apply text-primary-500 dark:text-neutral-100 hover:bg-transparent dark:hover:bg-transparent;
-        }
-
-        .btn-filled {
-          @apply bg-primary-500 text-white hover:bg-primary-700 dark:bg-primary-100 dark:text-primary-800;
-        }
-
-        .btn-filled-dark {
-          @apply bg-slate-900 hover:bg-slate-700 text-white dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-200 dark:hover:text-slate-900;
-        }
-
-        .btn-tonal {
-          @apply bg-primary-100 text-primary-900 hover:bg-primary-200 dark:bg-primary-800 dark:text-primary-100 dark:hover:bg-primary-700;
-        }
-
-        .btn-outlined {
-          @apply text-primary-500 border border-neutral-900/10 hover:border-neutral-900/20 dark:text-neutral-100 dark:border-neutral-100/10 dark:hover:border-neutral-100/20;
-        }
-
-        .btn-elevated {
-          @apply text-primary-500 shadow shadow-black/10 hover:shadow-black/20 dark:text-neutral-100;
-          /* shadow-[0_0_0.5rem_rgba(0,0,0,0.3)] */
-        }
-
-        .btn:disabled {
-          @apply opacity-[0.38];
-        }
-
-        /* Extended buttons */
-        .btn-extended-start {
-          @apply pl-4 px-6;
-        }
-
-        .btn-extended-start [class^='material-icons'],
-        .btn-extended-start .fa {
-          @apply mr-2 text-xl leading-5 w-5 h-5;
-        }
-
-        .btn-extended-end {
-          @apply pl-6 px-4;
-        }
-
-        .btn-extended-end [class^='material-icons'],
-        .btn-extended-end .fa {
-          @apply ml-2 text-xl leading-5 w-5 h-5;
-        }
-
-        /* Icon buttons */
-        .btn-icon {
-          @apply p-0 w-10 h-10 justify-center rounded-full text-xl;
-        }
-
-        .btn-icon [class^='material-icons'],
-        .btn-icon .fa {
-          @apply m-0;
-        }
-
-        .btn-sm {
-          @apply px-4 h-8 text-xs font-semibold;
-        }
-
-        .btn-lg {
-          @apply px-8 h-12 text-lg leading-5;
-        }
-
-        .btn-xl {
-          @apply px-10 h-14 text-base;
-        }
-
-        /* State buttons */
-        .btn-filled.btn-color-success {
-          @apply bg-green-600 hover:bg-green-700 focus:bg-green-800 dark:bg-green-100;
-        }
-
-        .btn-filled.btn-color-error {
-          @apply bg-red-500 hover:bg-red-600 focus:bg-red-700 dark:bg-red-100;
-        }
-
-        .btn-filled.btn-color-danger {
-          @apply bg-orange-500 hover:bg-orange-600 focus:bg-orange-700 dark:bg-orange-100;
-        }
-
-        .btn-filled.btn-color-info {
-          @apply bg-blue-500 hover:bg-blue-600 focus:bg-blue-700 dark:bg-blue-100;
-        }
-
-        .btn-filled.btn-color-link {
-          @apply bg-blue-500 hover:bg-blue-600 focus:bg-blue-700 dark:bg-blue-100;
-        }
-
-        /* Ripple */
-        .btn .ripple {
-          @apply absolute rounded-[50%] animate-[ripple_600ms_linear] bg-white/[0.7];
-        }
-
-        .btn-text .ripple,
-        .btn-link .ripple,
-        .btn-elevated .ripple,
-        .btn-outlined .ripple {
-          @apply bg-black/[0.1] dark:bg-white/[0.1];
-        }
-
-        .btn-filled .ripple {
-          @apply dark:bg-black/[0.1];
-        }
-
-        .btn-text .ripple,
-        .btn-link .ripple,
-        .btn-outlined .ripple {
-          @apply bg-primary/[0.3] dark:bg-primary-100/[0.3];
-        }
-
-        @keyframes ripple {
-          to {
-            transform: scale(4);
-            opacity: 0;
+function TemplateHero(props) {
+  const {
+    title,
+    subtitle
+  } = props.block;
+  const {
+    Section,
+    Container,
+    Button,
+    Link
+  } = props.ui;
+  // console.log('props', props.ui);
+  // const Section = KlarComponents.Section;
+  // const Container = KlarComponents.Container;
+  // const Button = KlarComponents.Button;
+  // const Link = KlarLink;
+  // console.log(KlarComponents);
+  return /*#__PURE__*/React.createElement(Section, {
+    className: "dark bg-slate-900"
+  }, /*#__PURE__*/React.createElement(Container, null, /*#__PURE__*/React.createElement("div", {
+    className: "text-center mx-auto max-w-3xl px:4 sm:px-16 pb-32 pt-20 sm:pt-40 sm:pb-48 dark:text-neutral-50"
+  }, /*#__PURE__*/React.createElement("h1", {
+    className: "text-4xl font-bold tracking-tight sm:text-center sm:text-6xl"
+  }, title), /*#__PURE__*/React.createElement("p", {
+    className: "mt-6 text-lg leading-8 sm:text-center text-neutral-700 dark:text-neutral-200"
+  }, subtitle), /*#__PURE__*/React.createElement("div", {
+    className: "mt-8 flex gap-x-4 sm:justify-center"
+  }, /*#__PURE__*/React.createElement(Link, {
+    className: "btn btn-filled-dark btn-lg",
+    to: "/sida-1"
+  }, "Learn more ", /*#__PURE__*/React.createElement("span", {
+    class: "ml-1 leading-[1.312rem]",
+    "aria-hidden": "true"
+  }, " \u2192")), /*#__PURE__*/React.createElement(Link, {
+    className: "btn btn-outlined btn-lg",
+    to: "/kontakt"
+  }, "Live demo ", /*#__PURE__*/React.createElement("span", {
+    class: "ml-1 leading-[1.312rem]",
+    "aria-hidden": "true"
+  }, "\u2192"))))));
+}
+function HeroTemplate(props) {
+  const {
+    Section,
+    Container,
+    Button,
+    Link
+  } = props.ui;
+  const {
+    _id,
+    _type,
+    show_button,
+    show_subtitle,
+    show_title,
+    title,
+    subtitle,
+    link,
+    link_text,
+    style,
+    image
+  } = props.block;
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("section", {
+    id: _id,
+    className: `${_type} section-padding-y klar-outline`,
+    "data-field-string-file": "image",
+    "data-placement": "top",
+    "data-offset-top": "210",
+    "data-hide-arrow": "true",
+    "data-wrapper": "true",
+    "no-data-inset": "true"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "container-fluid container-padding-x mx-auto"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "intro-text py-32 md:py-[130px] lg:py-[170px]"
+  }, show_subtitle && /*#__PURE__*/React.createElement("div", {
+    className: "intro-lead-in mb-4 md:mb-6 text-2xl lg:text-4xl lg:text-[40px]",
+    "data-field-string": "subtitle",
+    "data-placeholder": "Text f\xF6r lead-in"
+  }, subtitle), show_title && /*#__PURE__*/React.createElement("div", {
+    className: "intro-heading mb-8 md:mb-12 text-4xl sm:text-5xl lg:text-7xl lg:text-[75px] text-neutral-0 text-neutral-1 text-neutral-2 text-neutral-3 text-neutral-4 text-neutral-5 text-neutral-6 text-neutral-7 text-neutral-8 text-neutral-9 text-white",
+    style: {
+      color: 'white'
+    },
+    "data-field-string": "title"
+  }, title), show_button && /*#__PURE__*/React.createElement(Link, {
+    to: "/",
+    className: "button text-on-primary bg-primary dark:bg-primary-dark",
+    "data-field-string": "link_text",
+    "data-field-string-format-uri": "link",
+    "data-placement": "bottom"
+  }, link_text))), /*#__PURE__*/React.createElement("div", {
+    className: "background"
+  })), /*#__PURE__*/React.createElement("div", {
+    dangerouslySetInnerHTML: {
+      __html: `
+        <style>
+          #${_id} {
+            background-image: url('${image}');
+            background-position: 0 0px;
+            background-size: cover;
+            position: relative;
+            margin-top: 0;
+            height: 100vh;
+            text-align: center;
           }
-        }
+          #${_id} .container-auto {
+            
+          }
+          #${_id} .intro-text {
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+          }
+          #${_id} .intro-lead-in {
+            font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-style: italic;
+          }
+          #${_id} .intro-heading {
+            font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            text-transform: uppercase;
+            font-weight: 700;
+        
+          }
+          #${_id} .button {
+            display: inline-block;
+            margin-bottom: 0;
+            line-height: 1.42857143;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-image: none;
+            border: 1px solid transparent;
+            font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            text-transform: uppercase;
+            font-weight: 700;
+            border-radius: 3px;
+            font-size: 18px;
+            padding: 20px 40px;
+            ackground-color: #e02e3d;
+            order-color: #e02e3d;
+            olor: #ffffff;
+          }
+          #${_id} .background {
+            background-color: rgba(0, 0, 0, 0.4);
+            inset: 0;
+            position: absolute;
+          }
+        </style>`
+    }
+  }));
+}
+function FooterTemplate(props) {
+  const {
+    Section,
+    Container,
+    Button,
+    Link
+  } = props.ui;
+  const {
+    _id,
+    _type,
+    copyright_text,
+    social_links,
+    quick_links,
+    style,
+    image
+  } = props.block;
+  return /*#__PURE__*/React.createElement("footer", {
+    className: "text-center lg:text-left"
+  }, /*#__PURE__*/React.createElement(Container, null, /*#__PURE__*/React.createElement("div", {
+    className: "grid grid-cols-1 lg:grid-cols-3"
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("span", {
+    className: "copyright",
+    "data-field-string": "copyright_text",
+    dangerouslySetInnerHTML: {
+      __html: copyright_text
+    }
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "social-buttons-wrapper lg:text-center"
+  }, /*#__PURE__*/React.createElement("ul", {
+    className: "social-buttons"
+  }, social_links.map((item, i) => /*#__PURE__*/React.createElement("li", {
+    key: i
+  }, /*#__PURE__*/React.createElement("a", {
+    href: item.link,
+    "data-field-string-ui-widget-icon": `social_links[${i}].icon`,
+    "data-field-string-format-uri": `social_links[${i}].link`,
+    "data-placement": "bottom"
+  }, /*#__PURE__*/React.createElement("i", {
+    className: `fa fa-${item.icon}`
+  })))))), /*#__PURE__*/React.createElement("div", {
+    className: "lg:text-right"
+  }, /*#__PURE__*/React.createElement("ul", {
+    className: "quicklinks font-display"
+  }, quick_links.map((item, i) => /*#__PURE__*/React.createElement("li", {
+    key: i
+  }, /*#__PURE__*/React.createElement("a", {
+    href: item.link,
+    "data-field-string": `quick_links[${i}].title`,
+    "data-field-string-format-uri": `quick_links[${i}].link`,
+    "data-placement": "bottom"
+  }, item.title))))))), /*#__PURE__*/React.createElement(Style, {
+    id: _id,
+    type: _type,
+    style: style,
+    image: image
+  }));
+  function Style({
+    id,
+    style
+  }) {
+    const themeStyle = `
+      <!-- Theme CSS -->
+      <style>
+      footer {
+        padding: 25px 0;
       }
-    </style>
-  </head>
-  <body class="m-0">
-    <div id="root"></div>
-    <script src="http://localhost:5501/site/index.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/gh/klar-templates/template-editor@latest/site/index.js"></script> -->
-  <!-- Code injected by live-server -->
-<script>
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
-</script>
-</body>
-</html>
+      footer .copyright {
+        line-height: 40px;
+        font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        text-transform: uppercase;
+        text-transform: none;
+      }
+      footer .social-buttons-wrapper {
+        min-height: 1px;
+      }
+      footer ul.social-buttons {
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        gap: 10px;
+      }
+      footer ul.social-buttons li {
+        
+      }
+      footer ul.social-buttons li a {
+        display: block;
+        background-color: #222222;
+        height: 40px;
+        width: 40px;
+        border-radius: 100%;
+        font-size: 20px;
+        line-height: 40px;
+        color: white;
+        outline: none;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+      }
+      footer ul.social-buttons li a:hover,
+      footer ul.social-buttons li a:focus,
+      footer ul.social-buttons li a:active {
+        background-color: #fed136;
+      }
+      footer ul.quicklinks {
+        margin-bottom: 0;
+        line-height: 40px;
+        text-transform: uppercase;
+        text-transform: none;
+      }
+      footer ul.quicklinks li {
+        display: inline-block;
+        padding-right: 5px;
+        padding-left: 5px;
+      }
+      </style>
 
+      <!-- Style CSS -->
+      <style>
+      footer {
+        background-color: ${style.block.bg_color};
+        padding-top: ${style.block.padding_top}px;
+        padding-bottom: ${style.block.padding_bottom}px;
+      }
+      footer .social-buttons li a:hover,
+      footer .social-buttons li a:focus,
+      footer .social-buttons li a:active {
+        background-color: ${style.social_links_hover_bg_color};
+      }
+      </style>`;
+    return /*#__PURE__*/React.createElement("div", {
+      dangerouslySetInnerHTML: {
+        __html: themeStyle
+      }
+    });
+  }
+}
+const templateComponents = {
+  TemplateHero: TemplateHero,
+  FooterTemplate: FooterTemplate,
+  HeroTemplate: HeroTemplate
+};
+window.templateComponents = templateComponents;
+window.templateNunjucksBlocks = {"services-template":"<section id=\"{{block._id}}\" class=\"dark:bg-neutral-900 section-padding-y\">\n  <div class=\"container-fluid container-padding-x mx-auto\">\n    <div class=\"text-center\">\n      <h2 class=\"section-heading uppercase text-neutral-900 dark:text-neutral-100\" data-field-string=\"heading\">{{block.heading}}</h2>\n      <h3 class=\"section-subheading text-neutral-500 dark:text-neutral-200\" data-field-string=\"sub_heading\">{{block.sub_heading}}</h3>\n    </div>\n    <div class=\"grid grid-gap grid-cols-1 md:grid-cols-3 mt-12\" data-field-array=\"items\">\n    {% for item in block.items %}\n    <div class=\"mb-2 sm:mb-0\">\n      <div class=\"text-center\" data-field-array-item>\n        <span\n          class=\"fa-stack fa-4x\"\n          data-field-string-ui-widget-icon=\"items[{{loop.index0}}].icon\"\n          data-placement=\"center\"\n        >\n          <i class=\"fa fa-circle fa-stack-2x text-primary\"></i>\n          <i class=\"fa fa-{{ item.icon }} fa-stack-1x fa-inverse\"></i>\n        </span>\n        <h4\n          class=\"text-2xl font-bold mt-2 text-neutral-900 dark:text-neutral-100\"\n          data-field-string=\"items[{{loop.index0}}].heading\"\n        >{{ item.heading }}</h4>\n        <p\n          class=\"mt-4 leading-7 text-neutral-500 dark:text-neutral-200\"\n          data-field-string=\"items[{{loop.index0}}].text\"\n          data-toolbar-buttons=\"['bold', 'italic', 'underline', 'anchor']\"\n        >{{ item.text }}</p>\n      </div>\n    </div>\n    {% endfor %}\n    </div>\n  </div>\n</section>","team-template":"<section id=\"{{block._id}}\" class=\"section-padding-y bg-neutral-100 dark:bg-neutral-800\">\n  <div class=\"container-fluid container-padding-x mx-auto\">\n    <div class=\"text-center\">\n      <h2 class=\"section-heading uppercase text-neutral-900 dark:text-neutral-100\" data-field-string=\"heading\">{{ \"Det här är version: v0.0.1.\" | escape }}</h2>\n      <h3 class=\"section-subheading text-neutral-500 dark:text-neutral-200\" data-field-string=\"sub_heading\">{{block.sub_heading}}</h3>\n    </div>\n    <div class=\"grid grid-gap grid-cols-1 md:grid-cols-3 mt-2\" data-field-array=\"team\">\n    {% for item in block.team %}\n      <div class=\"mb-2 mt-10 sm:mb-0\">\n        <div class=\"text-center\" data-field-array-item>\n          <img class=\"border-8 border-neutral-200 w-48 h-48 lg:w-56 lg:h-56 mx-auto rounded-full\" src=\"{{ item.image }}\" data-field-string-file=\"team[{{loop.index0}}].image\" no-data-placement=\"top\" no-data-inset=\"true\" alt=\"{{ item.heading }}\" />\n          <h4 class=\"text-2xl font-bold mt-4 text-neutral-900 dark:text-neutral-100\" data-field-string=\"team[{{loop.index0}}].heading\">{{ item.heading }}</h4>\n          <p class=\"text-neutral-500 dark:text-neutral-200\" data-field-string=\"team[{{loop.index0}}].text\" data-toolbar-buttons=\"['bold', 'italic', 'underline', 'anchor']\">{{ item.text }}</p>\n          <ul class=\"flex gap-4 justify-center mt-4\">\n            {% set parent_index_0 = loop.index0 %}\n            {% for link_item in item.social_links %}\n              <li>\n                <a\n                  class=\"btn btn-filled-dark btn-icon\"\n                  href=\"{{ link_item.link }}\"\n                  data-href=\"{{ link_item.link }}\"\n                  data-field-string-ui-widget-icon=\"team[{{parent_index_0}}].social_links[{{loop.index0}}].icon\"\n                  data-field-string-format-uri=\"team[{{parent_index_0}}].social_links[{{loop.index0}}].link\"\n                  data-placement=\"bottom\">\n                    <span class=\"fa fa-{{ link_item.icon }}\"></span>\n                  </a>\n              </li>\n            {% endfor %}\n          </ul>\n        </div>\n      </div>\n    {% endfor %}\n    </div>\n    <div class=\"mx-auto text-center max-w-2xl mt-12\">\n      <p class=\"large text-muted text-neutral-700 dark:text-neutral-200\" data-field-text=\"text\" data-toolbar-buttons=\"['bold', 'italic', 'underline', 'anchor']\">{{ block.text }}</p>\n    </div>\n  </div>\n</section>","portfolio-template":"<section id=\"{{block._id}}\" class=\"section-padding-y g-neutral-100 dark:bg-neutral-800\">\n  <div class=\"container-fluid container-padding-x mx-auto\">\n    <div class=\"text-center\">\n      <h2 class=\"section-heading uppercase text-neutral-900 dark:text-neutral-100\" data-field-string=\"heading\">{{block.heading}}</h2>\n      <h3 class=\"section-subheading text-neutral-500 dark:text-neutral-200\" data-field-string=\"sub_heading\">{{block.sub_heading}}</h3>\n    </div>\n    <div class=\"grid grid-gap grid-cols-1 md:grid-cols-3 mt-8\" data-field-array=\"items\">\n    {% for item in block.items %}\n      <div class=\"mb-2 mt-4 sm:mb-0\" x-data=\"{ showModal: false }\" x-on:keydown.window.escape=\"showModal = false\" data-field-array-item>\n        <!-- Item -->\n        <a href=\"#{{block._id}}\" x-on:click=\"showModal = !showModal\" class=\"portfolio-link relative group\">\n          <div class=\"absolute inset-0 flex justify-center items-center transition uration-300 bg-primary/0 text-neutral-100/0 group-hover:bg-primary/75 hover:text-neutral-100/100\">\n            <div class=\"portfolio-hover-content\">\n              <i class=\"fa fa-plus fa-3x\"></i>\n            </div>\n          </div>\n          <img src=\"{{ item.image }}\" class=\"img-responsive\" alt=\"\" />\n        </a>\n        <div class=\"portfolio-caption text-center\">\n          <h4\n            class=\"mt-4 text-lg lg:text-xl\"\n            data-field-string=\"items[{{loop.index0}}].client\"\n          >{{ item.client }}</h4>\n          <p\n            data-field-string=\"items[{{loop.index0}}].category\"\n            data-toolbar-buttons=\"['bold']\"\n          >{{ item.category }}</p>\n        </div>\n        <!-- Modal -->\n        <div x-show=\"showModal\" x-transition.opacity class=\"fixed inset-0 bg-slate-900/75 z-50\" style=\"display: none;\"></div>\n        <div x-show=\"showModal\" x-transition class=\"fixed inset-0 z-50 flex items-center justify-center max-w-4xl mx-auto\" style=\"display: none;\">\n          <div x-on:click.away=\"showModal = false\" class=\"relative mx-auto bg-white rounded-lg h-96\" style=\"width: calc(100vw - 100px);height: calc(100vh - 100px)\">\n            <div class=\"p-12 h-full container-padding-x\">\n              <div class=\"text-center container-padding-x\">\n                <h2 class=\"text-4xl uppercase text-neutral-900 dark:text-neutral-100\" data-field-string=\"heading\">{{item.title}}</h2>\n                <h3 class=\"text-base font-medium italic mt-3 text-neutral-500 dark:text-neutral-200\" data-field-string=\"sub_heading\">{{item.summary}}</h3>\n              </div>\n              <div class=\"mt-6 flex justify-center\">\n                <img\n                  class=\"text-center img-responsive mg-centered\"\n                  data-field-string-file=\"items[{{loop.index0}}].image\"\n                  src=\"{{ item.image }}\"\n                  alt=\"\" />\n              </div>\n              <div class=\"text-center mt-6 mx-auto leading-6 max-w-2xl\" data-field-text=\"items[{{loop.index0}}].body\">{{ item.body }}</div>\n              <ul class=\"text-center mt-6\">\n                <li><strong>Date</strong>: {{ item.date }}</li>\n                <li><strong>Client</strong>: {{ item.client }}</li>\n                <li><strong>Category</strong>: {{ item.category }}</li>\n              </ul>\n              <div class=\"text-center absolute bottom-10 left-0 w-full\">\n                <button x-on:click=\"showModal = !showModal\" type=\"button\" class=\"btn btn-filled btn-extended-start\">\n                  <i class=\"fa fa-times\"></i> Close Project\n                </button>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>  \n    {% endfor %}\n    </div>\n    <div class=\"col-lg-8 mx-auto text-center max-w-2xl mt-12\">\n      <p class=\"large text-muted text-neutral-700 dark:text-neutral-200\" data-field-text=\"text\" data-toolbar-buttons=\"['bold', 'italic', 'underline', 'anchor']\">{{ block.text }}</p>\n    </div>\n  </div>\n</section>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<!-- <div x-data=\"{ showModal: false }\" x-on:keydown.window.escape=\"showModal = false\">\n  <button x-on:click=\"showModal = !showModal\" class=\"btn btn-filled bg-blue-700 hover:bg-blue-800\">\n    Toggle Modal\n  </button>\n\n  <div x-show=\"showModal\" x-transition.opacity class=\"fixed inset-0 bg-slate-900/75 z-50\" style=\"display: none;\"></div>\n  <div x-show=\"showModal\" x-transition class=\"fixed inset-0 z-50 flex items-center justify-center\" style=\"display: none;\">\n    <div x-on:click.away=\"showModal = false\" class=\"mx-auto bg-white rounded-lg h-96\" style=\"width: calc(100vw - 200px);height: calc(100vh - 200px)\"></div>\n  </div>\n</div> -->"};
+})();
