@@ -27,8 +27,8 @@
           >{{ item.category }}</p>
         </div>
         <!-- Modal -->
-        <div x-show="showModal" x-transition.opacity class="fixed inset-0 bg-slate-900/75 z-50" style="display: none;"></div>
-        <div x-show="showModal" x-transition class="fixed inset-0 z-50 flex items-center justify-center max-w-4xl mx-auto" style="display: none;">
+        <div x-show="showModal" x-transition.opacity class="fixed inset-0 bg-slate-900/75 z-[1000]" style="display: none;"></div>
+        <div x-show="showModal" x-transition class="fixed inset-0 z-[1000] flex items-center justify-center max-w-4xl mx-auto" style="display: none;">
           <div x-on:click.away="showModal = false" class="relative mx-auto bg-white rounded-lg h-96" style="width: calc(100vw - 100px);height: calc(100vh - 100px)">
             <div class="p-12 h-full container-padding-x">
               <div class="text-center container-padding-x">
@@ -94,8 +94,8 @@
     Toggle Modal
   </button>
 
-  <div x-show="showModal" x-transition.opacity class="fixed inset-0 bg-slate-900/75 z-50" style="display: none;"></div>
-  <div x-show="showModal" x-transition class="fixed inset-0 z-50 flex items-center justify-center" style="display: none;">
+  <div x-show="showModal" x-transition.opacity class="fixed inset-0 bg-slate-900/75 z-1000" style="display: none;"></div>
+  <div x-show="showModal" x-transition class="fixed inset-0 z-1000 flex items-center justify-center" style="display: none;">
     <div x-on:click.away="showModal = false" class="mx-auto bg-white rounded-lg h-96" style="width: calc(100vw - 200px);height: calc(100vh - 200px)"></div>
   </div>
 </div> -->
