@@ -9,13 +9,13 @@
       "type": "object",
       "fields": [
         {
-          "title": "Lead in",
-          "name": "subtitle",
+          "title": "Rubrik",
+          "name": "title",
           "type": "string"
         },
         {
-          "title": "Rubrik",
-          "name": "title",
+          "title": "Lead in",
+          "name": "subtitle",
           "type": "string"
         },
         {
@@ -322,13 +322,13 @@
       "type": "object",
       "fields": [
         {
-          "title": "Lead in",
-          "name": "subtitle",
+          "title": "Rubrik",
+          "name": "title",
           "type": "string"
         },
         {
-          "title": "Rubrik",
-          "name": "title",
+          "title": "Lead in",
+          "name": "subtitle",
           "type": "string"
         },
         {
