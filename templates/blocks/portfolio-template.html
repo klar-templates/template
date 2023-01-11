@@ -62,5 +62,16 @@
   </div>
 </section>
 <script>
-  console.log('test');
+  (function () {
+      const modalSelecter = window['klar-modal-selector'];
+    if(modalSelecter) {
+      modal = document.querySelector(modalSelecter);
+      modal.style.display = 'flex';
+      document.querySelector(modalSelecter + ' + div').style.display = 'flex';
+    }
+    function setModalSelector(selector) {
+      window['klar-modal-selector'] = selector;
+    }
+    window.setModalSelector = setModalSelector;
+  })();
 </script>
