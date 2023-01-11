@@ -8,7 +8,7 @@
     {% for item in block.items %}
       <div class="mb-2 mt-4 sm:mb-0" x-data="{ showModal: false }" x-on:keydown.window.escape="showModal = false" data-field-array-item>
         <!-- Item -->
-        <a href="#{{block._id}}" x-on:click="showModal = !showModal" x-on:click.prevent class="portfolio-link relative group">
+        <a href="#{{block._id}}" x-on:click="showModal = !showModal" x-on:click.prevent onclick="setModalSelector('.modal-{{loop.index0}}')" class="portfolio-link relative group">
           <div class="absolute inset-0 flex justify-center items-center transition uration-300 bg-primary/0 text-neutral-100/0 group-hover:bg-primary/75 hover:text-neutral-100/100">
             <div class="portfolio-hover-content">
               <i class="fa fa-plus fa-3x"></i>
@@ -27,7 +27,7 @@
           >{{ item.category }}</p>
         </div>
         <!-- Modal -->
-        <div x-show="showModal" x-transition.opacity class="fixed inset-0 bg-slate-900/75 z-[1000]" style="display: none;"></div>
+        <div x-show="showModal" x-transition.opacity class="fixed inset-0 bg-slate-900/75 z-[1000] modal-{{loop.index0}}" style="display: none;"></div>
         <div x-show="showModal" x-transition class="fixed inset-0 z-[1000] flex items-center justify-center max-w-4xl mx-auto" style="display: none;">
           <div x-on:click.away="showModal = false" class="relative mx-auto bg-white rounded-lg h-96" style="width: calc(100vw - 100px);height: calc(100vh - 100px)">
             <div class="p-12 h-full container-padding-x">
@@ -61,7 +61,22 @@
     </div>
   </div>
 </section>
-
+<script data-inline="true">
+(function () {
+    const modalSelecter = window['klar-modal-selector'];
+  if(modalSelecter) {
+    modal = document.querySelector(modalSelecter);
+    // modal.click();
+    modal.style.display = 'flex';
+    document.querySelector(modalSelecter + ' + div').style.display = 'flex';
+  }
+  function setModalSelector(selector) {
+    window['klar-modal-selector'] = selector;
+  }
+  window.setModalSelector = setModalSelector;
+  // window['klar-modal-selector'] = false;
+})()
+</script>
 
 
 
