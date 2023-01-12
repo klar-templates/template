@@ -73,6 +73,7 @@
     }
     function closeModal() {
       setState(false);
+      setTimeout(() => { if (parent.frames.window.reactPageIsLoaded) { parent.frames.window.reactPageIsLoaded() } }, 200);
     }
     window.showModal = showModal;
     window.closeModal = closeModal;
