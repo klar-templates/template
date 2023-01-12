@@ -68,7 +68,7 @@
     function showModal(e, i) {
       e.preventDefault();
       setTimeout(() => setState({show: true, index: i}), 100);
-      setTimeout(() => { if (parent.frames.makePageEditable) { consle.log('ja');parent.frames.makePageEditable() } }, 400);
+      setTimeout(() => { if (parent.frames.window.reactPageIsLoaded) { consle.log('ja');parent.frames.window.reactPageIsLoaded() } }, 200);
       
     }
     function closeModal() {
