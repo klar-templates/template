@@ -63,19 +63,23 @@
 </section>
 <style>.show-modal {display: flex !important;}</style>
 <script>
-  (function () {
-    const setState = nunjucksSetData['{{block._id}}'];
-    function showModal(e, i) {
-      e.preventDefault();
-      setTimeout(() => setState({show: true, index: i}), 100);
-      setTimeout(() => { if (parent.frames.window.reactPageIsLoaded) { parent.frames.window.reactPageIsLoaded() } }, 200);
-      
-    }
-    function closeModal() {
-      setState(false);
-      setTimeout(() => { if (parent.frames.window.reactPageIsLoaded) { parent.frames.window.reactPageIsLoaded() } }, 200);
-    }
-    window.showModal = showModal;
-    window.closeModal = closeModal;
-  })();
+  if (typeof parent.frames.window.klar !== 'undefined') {
+    (function () {
+      const setState = nunjucksSetData['{{block._id}}'];
+      function showModal(e, i) {
+        e.preventDefault();
+        setTimeout(() => setState({show: true, index: i}), 100);
+        setTimeout(() => { if (parent.frames.window.reactPageIsLoaded) { parent.frames.window.reactPageIsLoaded() } }, 200);
+      }
+      function closeModal() {
+        setState(false);
+        setTimeout(() => { if (parent.frames.window.reactPageIsLoaded) { parent.frames.window.reactPageIsLoaded() } }, 200);
+      }
+      window.showModal = showModal;
+      window.closeModal = closeModal;
+    })();
+  } else {
+    window.showModal = function() {};
+    window.closeModal = function() {};
+  }
 </script>
