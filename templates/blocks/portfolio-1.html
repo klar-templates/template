@@ -109,12 +109,10 @@
       let targetEl = evt.target;
       do {
         if(dialogs.includes(targetEl)) {
-          // console.log('Clicked inside');
           return;
         }
         targetEl = targetEl.parentNode;
       } while (targetEl);
-      // console.log('Clicked ouside');
       closeModal();
     });
   }
