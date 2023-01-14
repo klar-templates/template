@@ -251,6 +251,7 @@
       "name": "portfolio-template",
       "type": "object",
       "icon": "book",
+      "hidden": true,
       "template_engine": "nunjucks",
       "fields": [
         {
@@ -322,6 +323,7 @@
       "name": "portfolio-1",
       "type": "object",
       "icon": "book",
+      "hidden": true,
       "template_engine": "nunjucks",
       "fields": [
         {
@@ -389,7 +391,7 @@
       ]  
     },
     {
-      "title": "Portfolioo",
+      "title": "Portfolio",
       "name": "portfolio-the-one",
       "type": "object",
       "icon": "book",
