@@ -153,39 +153,25 @@
                   "title": "Bild",
                   "name": "image",
                   "type": "string",
-                  "format": "file"
+                  "format": "file",
+                  "default": "https://startbootstrap.github.io/startbootstrap-agency/assets/img/team/1.jpg"
                 },
                 {
                   "title": "Rubrik",
                   "name": "heading",
-                  "type": "string"
+                  "type": "string",
+                  "default": "Kay Garland"
                 },
                 {
                   "title": "Text",
                   "name": "text",
-                  "type": "text"
+                  "type": "text",
+                  "default": "Lead Designer"
                 },
                 {
                   "title": "Social links",
                   "name": "social_links",
                   "type": "array",
-                  "default": [
-                    {
-                      "title": "Twitter",
-                      "icon": "twitter",
-                      "link": "#youraccount"
-                    },
-                    {
-                      "title": "Facebook",
-                      "icon": "facebook",
-                      "link": "#youraccount"
-                    },
-                    {
-                      "title": "Instagram",
-                      "icon": "instagram",
-                      "link": "#youraccount"
-                    }
-                  ],
                   "of": [{
                     "title": "Länk",
                     "name": "link",
@@ -213,7 +199,24 @@
                         "default": "#youraccount"
                       }
                     ]
-                  }]
+                  }],
+                  "default": [
+                    {
+                      "title": "Twitter",
+                      "icon": "twitter",
+                      "link": "#youraccount"
+                    },
+                    {
+                      "title": "Facebook",
+                      "icon": "facebook",
+                      "link": "#youraccount"
+                    },
+                    {
+                      "title": "Instagram",
+                      "icon": "instagram",
+                      "link": "#youraccount"
+                    }
+                  ]
                 }
               ]
             }
@@ -416,39 +419,46 @@
                 {
                   "title": "Titel",
                   "name": "title",
-                  "type": "string"
+                  "type": "string",
+                  "default": "Project name"
                 },
                 {
                   "title": "Summary",
                   "name": "summary",
-                  "type": "text"
+                  "type": "text",
+                  "default": "Lorem ipsum dolor sit amet consectetur."
                 },
                 {
                   "title": "Body",
                   "name": "body",
-                  "type": "text"
+                  "type": "text",
+                  "default": "<p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p><p><strong>Want these icons in this portfolio item sample?</strong>You can download 60 of them for free, courtesy of <a href=\"https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc\">RoundIcons.com</a>, or you can purchase the 1500 icon set <a href=\"https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc\">here</a>.</p>"
                 },
                 {
                   "title": "Bild",
                   "name": "image",
                   "type": "string",
-                  "format": "file"
+                  "format": "file",
+                  "default": "https://raw.githubusercontent.com/klar-templates/agency/master/img/portfolio/roundicons.png"
                 },
                 {
                   "title": "Kategori",
                   "name": "category",
-                  "type": "string"
+                  "type": "string",
+                  "default": "Graphic Design"
                 },
                 {
                   "title": "Klient",
                   "name": "client",
-                  "type": "string"
+                  "type": "string",
+                  "default": "Round Icons"
                 },
                 {
                   "title": "Datum",
                   "name": "date",
                   "type": "string",
-                  "format": "date-time"
+                  "format": "date-time",
+                  "default": "2023-01-14"
                 }
               ]
             }
