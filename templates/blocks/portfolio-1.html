@@ -97,26 +97,26 @@
   function showModal(e, i) {
     e.preventDefault();
     setTimeout(() => setState({show: true, index: i}), 100);
-    setTimeout(() => { if (parent.frames.window.reactPageIsLoaded) { parent.frames.window.reactPageIsLoaded() } }, 200);
+    setTimeout(() => { if (parent.frames.window.reactPageIsLoaded) { parent.frames.window.reactPageIsLoaded() } }, 150);
   }
   function closeModal() {
     setState(false);
-    setTimeout(() => { if (parent.frames.window.reactPageIsLoaded) { parent.frames.window.reactPageIsLoaded() } }, 200);
+    setTimeout(() => { if (parent.frames.window.reactPageIsLoaded) { parent.frames.window.reactPageIsLoaded() } }, 150);
   }
-  function clickOutsideEvents() {
-    document.addEventListener('click', (evt) => {
-      const dialogs = [...document.querySelectorAll('.dialog')];
-      let targetEl = evt.target;
-      do {
-        if(dialogs.includes(targetEl)) {
-          return;
-        }
-        targetEl = targetEl.parentNode;
-      } while (targetEl);
-      closeModal();
-    });
-  }
-  clickOutsideEvents();
+  // function clickOutsideEvents() {
+  //   document.addEventListener('click', (evt) => {
+  //     const dialogs = [...document.querySelectorAll('.dialog')];
+  //     let targetEl = evt.target;
+  //     do {
+  //       if(dialogs.includes(targetEl)) {
+  //         return;
+  //       }
+  //       targetEl = targetEl.parentNode;
+  //     } while (targetEl);
+  //     closeModal();
+  //   });
+  // }
+  // clickOutsideEvents();
   window.showModal = showModal;
   window.closeModal = closeModal;
 })();

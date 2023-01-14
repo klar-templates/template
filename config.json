@@ -323,7 +323,7 @@
       "name": "portfolio-1",
       "type": "object",
       "icon": "book",
-      "hidden": true,
+      "hidden": false,
       "template_engine": "nunjucks",
       "fields": [
         {
