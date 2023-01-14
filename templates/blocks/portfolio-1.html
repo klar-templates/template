@@ -98,7 +98,7 @@
     e.preventDefault();
     setState({show: true, index: i});
     setTimeout(() => { setState({no_effect: true, show: true, index: i});}, 150);
-    setTimeout(() => { if (parent.frames.window.reactPageIsLoaded) { parent.frames.window.reactPageIsLoaded() } }, 150);
+    setTimeout(() => { if (parent.frames.window.reactPageIsLoaded) { parent.frames.window.reactPageIsLoaded() } }, 300);
   }
   function closeModal() {
     setState(false);
