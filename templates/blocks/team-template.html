@@ -6,8 +6,8 @@
     </div>
     <div class="grid grid-gap grid-cols-1 md:grid-cols-3 mt-2" data-field-array="team">
     {% for item in block.team %}
-      <div class="mb-2 mt-10 sm:mb-0">
-        <div class="text-center" data-field-array-item>
+      <div class="mb-0 mt-6 sm:mb-0">
+        <div class="text-center py-4" data-field-array-item>
           <img class="border-8 border-neutral-200 w-48 h-48 lg:w-56 lg:h-56 mx-auto rounded-full" src="{{ item.image }}" data-field-string-file="team[{{loop.index0}}].image" no-data-placement="top" no-data-inset="true" alt="{{ item.heading }}" />
           <h4 class="text-2xl font-bold mt-4 text-neutral-900 dark:text-neutral-100" data-field-string="team[{{loop.index0}}].heading">{{ item.heading }}</h4>
           <p class="text-neutral-500 dark:text-neutral-200" data-field-string="team[{{loop.index0}}].text" data-toolbar-buttons="['bold', 'italic', 'underline', 'anchor']">{{ item.text }}</p>
