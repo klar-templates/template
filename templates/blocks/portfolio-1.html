@@ -6,7 +6,7 @@
     </div>
     <div class="grid grid-gap grid-cols-1 md:grid-cols-3 mt-8" data-field-array="items">
     {% for item in block.items %}
-      <div class="mb-2 mt-4 sm:mb-0" data-field-array-item>
+      <div class="pb-2 mt-4 sm:mb-0" data-field-array-item>
         <!-- Item -->
         <a href="#{{block._id}}" class="portfolio-link relative group" onclick="showModal(event, {{loop.index0}});">
           <div class="absolute inset-0 flex justify-center items-center transition uration-300 bg-primary/0 text-neutral-100/0 group-hover:bg-primary/75 hover:text-neutral-100/100">
