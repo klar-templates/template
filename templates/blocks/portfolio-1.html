@@ -1,7 +1,7 @@
 <section id="{{block._id}}" class="section-padding-y g-neutral-100 dark:bg-neutral-800">
   <div class="container-fluid container-padding-x mx-auto">
     <div class="text-center">
-      <h2 class="section-heading uppercase text-neutral-900 dark:text-neutral-100" data-field-string="heading">{{block.heading}} - {{state.show}}</h2>
+      <h2 class="section-heading uppercase text-neutral-900 dark:text-neutral-100" data-field-string="heading">{{block.heading}}</h2>
       <h3 class="section-subheading text-neutral-500 dark:text-neutral-200" data-field-string="sub_heading">{{block.sub_heading}}</h3>
     </div>
     <div class="grid grid-gap grid-cols-1 md:grid-cols-3 mt-8" data-field-array="items">
@@ -27,9 +27,9 @@
           >{{ item.category }}</p>
         </div>
         <!-- Modal -->
-        <div class="effect fixed inset-0 bg-neutral-900/75 z-[1000] modal-{{loop.index0}} {{ "show-modal" if state.index == loop.index0 }}" style="display: none;"></div>
+        <div class="{{ "effect" if state.no_effect != true }} fixed inset-0 bg-neutral-900/75 z-[1000] modal-{{loop.index0}} {{ "show-modal" if state.index == loop.index0 }}" style="display: none;"></div>
         <div class="fixed inset-0 z-[1000] flex items-center justify-center max-w-4xl mx-auto {{ "show-modal" if state.index == loop.index0 }}" style="display: none;">
-          <div class="effect-1 dialog relative mx-auto bg-white rounded-lg h-96" style="width: calc(100vw - 100px);height: calc(100vh - 100px)">
+          <div class="{{ "effect-1" if state.no_effect != true }} dialog relative mx-auto bg-white rounded-lg h-96" style="width: calc(100vw - 100px);height: calc(100vh - 100px)">
             <div class="p-12 h-full container-padding-x">
               <div class="text-center container-padding-x">
                 <h2 class="text-4xl uppercase text-neutral-900 dark:text-neutral-100" data-field-string="items[{{loop.index0}}].title">{{item.title}}</h2>
@@ -65,8 +65,6 @@
   .show-modal {display: flex !important;}
   .effect {animation: effect 150ms;}
   .effect-1 {animation: effect-1 150ms;}
-  .show-modal.effect {animation: none;}
-  .show-modal .effect-1 {animation: none;}
   @keyframes effect {
     from {
       background-color: rgb(var(--neutral-900) / 0.25);
@@ -99,7 +97,7 @@
   function showModal(e, i) {
     e.preventDefault();
     setState({show: true, index: i});
-    // setTimeout(() => setState({show: true, index: i}), 100);
+    setTimeout(() => { setState({no_effect: true, show: true, index: i});}, 150);
     setTimeout(() => { if (parent.frames.window.reactPageIsLoaded) { parent.frames.window.reactPageIsLoaded() } }, 150);
   }
   function closeModal() {
