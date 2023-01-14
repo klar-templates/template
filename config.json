@@ -419,12 +419,12 @@
                   "type": "string"
                 },
                 {
-                  "title": "Text",
+                  "title": "Summary",
                   "name": "summary",
                   "type": "text"
                 },
                 {
-                  "title": "Text",
+                  "title": "Body",
                   "name": "body",
                   "type": "text"
                 },
