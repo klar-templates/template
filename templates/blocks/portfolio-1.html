@@ -62,9 +62,11 @@
   </div>
 </section>
 <style>
-  .show-modal {display: flex !important;}
   .effect {animation: effect 150ms;}
   .effect-1 {animation: effect-1 150ms;}
+  .show-modal {display: flex !important;}
+  .show-modal.effect {animation: none;}
+  .show-modal .effect-1 {animation: none;}
   @keyframes effect {
     from {
       background-color: rgb(var(--neutral-900) / 0.25);
@@ -103,20 +105,20 @@
     setState(false);
     setTimeout(() => { if (parent.frames.window.reactPageIsLoaded) { parent.frames.window.reactPageIsLoaded() } }, 150);
   }
-  // function clickOutsideEvents() {
-  //   document.addEventListener('click', (evt) => {
-  //     const dialogs = [...document.querySelectorAll('.dialog')];
-  //     let targetEl = evt.target;
-  //     do {
-  //       if(dialogs.includes(targetEl)) {
-  //         return;
-  //       }
-  //       targetEl = targetEl.parentNode;
-  //     } while (targetEl);
-  //     closeModal();
-  //   });
-  // }
-  // clickOutsideEvents();
+  function clickOutsideEvents() {
+    document.addEventListener('click', (evt) => {
+      const dialogs = [...document.querySelectorAll('.dialog')];
+      let targetEl = evt.target;
+      do {
+        if(dialogs.includes(targetEl)) {
+          return;
+        }
+        targetEl = targetEl.parentNode;
+      } while (targetEl);
+      closeModal();
+    });
+  }
+  clickOutsideEvents();
   window.showModal = showModal;
   window.closeModal = closeModal;
 })();
