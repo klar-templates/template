@@ -17,7 +17,7 @@ export default function HeroTemplate(props) {
     <>
       <section
         id={_id}
-        className={`${_type} section-padding-y klar-outline`}
+        className={`${_type} section-padding-y klar-outline md:h-screen`}
         data-field-string-file="image"
         data-placement="top"
         data-offset-top="210"
@@ -26,10 +26,10 @@ export default function HeroTemplate(props) {
         no-data-inset="true"
       >
         <div className="container-fluid container-padding-x mx-auto">
-          <div className="intro-text py-32 md:py-[130px] lg:py-[170px]">
+          <div className="intro-text pb-16 pt-20 md:py-[170px] lg:py-[170px]">
             {show_subtitle && (
               <div
-                className="intro-lead-in mb-4 md:mb-6 text-2xl lg:text-4xl lg:text-[40px]"
+                className="intro-lead-in mb-4 md:mb-6 text-xl sm:text-3xl lg:text-4xl lg:text-[40px]"
                 data-field-string="subtitle"
                 data-placeholder="Text för lead-in"
               >
@@ -38,16 +38,7 @@ export default function HeroTemplate(props) {
             )}
             {show_title && (
               <div
-                className="intro-heading mb-8 md:mb-12 text-4xl sm:text-5xl lg:text-7xl lg:text-[75px] text-neutral-0 text-neutral-1
-                text-neutral-2
-                text-neutral-3
-                text-neutral-4
-                text-neutral-5
-                text-neutral-6
-                text-neutral-7
-                text-neutral-8
-                text-neutral-9
-                text-white"
+                className="intro-heading mb-8 md:mb-12 text-4xl sm:text-6xl lg:text-7xl lg:text-[75px] text-white"
                 style={{ color: 'white' }}
                 data-field-string="title"
               >
@@ -77,7 +68,6 @@ export default function HeroTemplate(props) {
             background-size: cover;
             position: relative;
             margin-top: 0;
-            height: 100vh;
             text-align: center;
           }
           #${_id} .container-auto {

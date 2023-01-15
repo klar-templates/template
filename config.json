@@ -465,7 +465,7 @@
       ]
     },
     {
-      "title": "Footer",
+      "title": "Sidfot",
       "name": "FooterTemplate",
       "icon": "address-card-o",
       "hidden": false,
@@ -473,37 +473,106 @@
       "type": "object",
       "fields": [
         {
-          "title": "title",
-          "name": "title",
+          "title": "Copyright text",
+          "name": "copyright_text",
           "type": "string"
         },
         {
-          "title": "Beskrivning",
-          "name": "description",
-          "type": "text"
-        },
-        {
-          "title": "Style",
-          "name": "style",
-          "type": "object",
-          "fields": [
+          "title": "Social links",
+          "name": "social_links",
+          "type": "array",
+          "of": [
             {
-              "title": "title",
-              "name": "title",
-              "type": "string"
-            },
-            {
-              "title": "Beskrivning",
-              "name": "description",
-              "type": "text"
-            },
-            {
-              "title": "Style",
-              "name": "style",
-              "type": "object"
+              "title": "Länk",
+              "type": "object",
+              "display_field": "title",
+              "fields": [
+                {
+                  "title": "Titel",
+                  "name": "title",
+                  "type": "string",
+                  "default": "Titel"
+                },
+                {
+                  "title": "Ikon",
+                  "name": "icon",
+                  "type": "string",
+                  "default": "twitter",
+                  "ui:widget": "icon",
+                  "num": [
+                    "-1",
+                    "twitter",
+                    "facebook",
+                    "instagram",
+                    "linkedin"
+                  ],
+                  "numNames": [
+                    "Välj ikon",
+                    "Twitter",
+                    "Facebook",
+                    "Instagram",
+                    "LinkedIn"
+                  ]
+                },
+                {
+                  "title": "Länk",
+                  "name": "link",
+                  "type": "string",
+                  "format": "uri",
+                  "default": "#youraccount"
+                }
+              ]
             }
           ]
-        }
+        },
+        {
+          "title": "Snabblänkar",
+          "name": "quick_links",
+          "type": "array",
+          "of": [
+            {
+              "title": "Länk",
+              "type": "object",
+              "display_field": "title",
+              "fields": [
+                {
+                  "title": "Titel",
+                  "name": "title",
+                  "type": "string",
+                  "default": "New link"
+                },
+                {
+                  "title": "Ikon",
+                  "name": "icon",
+                  "type": "string",
+                  "default": "twitter",
+                  "ui:widget": "icon",
+                  "num": [
+                    "-1",
+                    "twitter",
+                    "facebook",
+                    "instagram",
+                    "linkedin"
+                  ],
+                  "numNames": [
+                    "Välj ikon",
+                    "Twitter",
+                    "Facebook",
+                    "Instagram",
+                    "LinkedIn"
+                  ]
+                },
+                {
+                  "title": "Länk",
+                  "name": "link",
+                  "type": "string",
+                  "format": "uri",
+                  "default": "#"
+                }
+              ]
+            }
+          ]
+        }  
       ]
     }
   ],
@@ -830,11 +899,11 @@
         "quick_links": [
           {
             "title": "Privacy Policy",
-            "link": ""
+            "link": "#"
           },
           {
             "title": "Terms of Use",
-            "link": ""
+            "link": "#"
           }
         ],
         "style": {

@@ -25,10 +25,12 @@ export default function FooterTemplate(props) {
               {social_links.map((item, i) => (
                 <li key={i}>
                   <a
+                    className="btn btn-filled-dark btn-icon"
                     href={item.link}
                     data-field-string-ui-widget-icon={`social_links[${i}].icon`}
                     data-field-string-format-uri={`social_links[${i}].link`}
                     data-placement="bottom"
+                    data-href={item.link}
                   >
                     <i className={`fa fa-${item.icon}`}></i>
                   </a>
@@ -42,6 +44,7 @@ export default function FooterTemplate(props) {
                 <li key={i}>
                   <a
                     href={item.link}
+                    data-href={item.link}
                     data-field-string={`quick_links[${i}].title`}
                     data-field-string-format-uri={`quick_links[${i}].link`}
                     data-placement="bottom"
@@ -82,25 +85,6 @@ export default function FooterTemplate(props) {
       }
       footer ul.social-buttons li {
         
-      }
-      footer ul.social-buttons li a {
-        display: block;
-        background-color: #222222;
-        height: 40px;
-        width: 40px;
-        border-radius: 100%;
-        font-size: 20px;
-        line-height: 40px;
-        color: white;
-        outline: none;
-        -webkit-transition: all 0.3s;
-        -moz-transition: all 0.3s;
-        transition: all 0.3s;
-      }
-      footer ul.social-buttons li a:hover,
-      footer ul.social-buttons li a:focus,
-      footer ul.social-buttons li a:active {
-        background-color: #fed136;
       }
       footer ul.quicklinks {
         margin-bottom: 0;
