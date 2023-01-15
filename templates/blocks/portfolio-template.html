@@ -31,7 +31,7 @@
         <!-- Modal -->
         <div x-show="showModal" x-transition.opacity class="fixed inset-0 bg-slate-900/75 z-[1000]" style="display: none;"></div>
         <div x-show="showModal" x-transition class="fixed inset-0 z-[1000] flex items-center justify-center max-w-4xl mx-auto" style="display: none;">
-          <div x-on:click.away="showModal = false" class="relative mx-auto bg-white rounded-lg w-[calc(100vw-40px)] md:w-[calc(100vw-100px)] h-[calc(100vh-100px)]" style="overflow: auto;">
+          <div -on:click.away="showModal = false" class="relative mx-auto bg-white rounded-lg w-[calc(100vw-40px)] md:w-[calc(100vw-100px)] h-[calc(100vh-100px)] overflow-auto">
             <div class="p-6 md:p-12">
               <div class="text-center">
                 <h2 class="text-4xl uppercase text-neutral-900 dark:text-neutral-100" data-field-string="items[{{loop.index0}}].title">{{item.title}}</h2>
