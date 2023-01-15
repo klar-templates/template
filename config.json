@@ -542,27 +542,6 @@
                   "default": "New link"
                 },
                 {
-                  "title": "Ikon",
-                  "name": "icon",
-                  "type": "string",
-                  "default": "twitter",
-                  "ui:widget": "icon",
-                  "num": [
-                    "-1",
-                    "twitter",
-                    "facebook",
-                    "instagram",
-                    "linkedin"
-                  ],
-                  "numNames": [
-                    "Välj ikon",
-                    "Twitter",
-                    "Facebook",
-                    "Instagram",
-                    "LinkedIn"
-                  ]
-                },
-                {
                   "title": "Länk",
                   "name": "link",
                   "type": "string",
