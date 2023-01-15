@@ -251,7 +251,7 @@
       "name": "portfolio-state",
       "type": "object",
       "icon": "book",
-      "hidden": false,
+      "hidden": true,
       "template_engine": "nunjucks",
       "fields": [
         {
