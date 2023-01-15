@@ -8,7 +8,7 @@
     {% for item in block.items %}
       <div class="pb-2 mt-4 sm:mb-0" x-data="{ showModal: false }" x-on:keydown.window.escape="showModal = false" data-field-array-item>
         <!-- Item -->
-        <a href="#{{block._id}}" x-on:click="showModal = !showModal" x-on:click.prevent class="portfolio-link relative group modal-opener-{{loop.index0}}" onclick="window.setModalOpened(event,'{{loop.index0}}')">
+        <a href="#{{block._id}}" x-on:click="showModal = !showModal" x-on:click.prevent class="relative group modal-opener-{{loop.index0}}" onclick="window.setModalOpened(event,'{{loop.index0}}')">
           <div class="absolute inset-0 flex justify-center items-center transition uration-300 bg-primary/0 text-neutral-100/0 group-hover:bg-primary/75 hover:text-neutral-100/100">
             <div class="portfolio-hover-content">
               <i class="fa fa-plus fa-3x"></i>
@@ -18,7 +18,7 @@
             class="img-responsive" alt=""
           />
         </a>
-        <div class="portfolio-caption text-center">
+        <div class="text-center">
           <h4
             class="mt-4 text-lg lg:text-xl"
             data-field-string="items[{{loop.index0}}].client"
@@ -73,9 +73,9 @@
     window.modalOpened = false;
   }
   if (window.modalOpened) {
-    document.querySelector('.modal-opener-' + window.modalOpened).click();
-    // document.querySelector('.modal-' + window.modalOpened).style.display = 'flex';
-    // document.querySelector('.dialog-' + window.modalOpened).style.display = 'flex';
+    // document.querySelector('.modal-opener-' + window.modalOpened).click();
+    document.querySelector('.modal-' + window.modalOpened).style.display = 'flex';
+    document.querySelector('.dialog-' + window.modalOpened).style.display = 'flex';
   }
   window.setModalOpened = setModalOpened;
   window.setModalClosed = setModalClosed;
