@@ -49,6 +49,9 @@ export default function HeroTemplate(props) {
               <Link
                 to="/sida-1"
                 className="button text-on-primary text-white bg-primary dark:bg-primary-dark"
+                data-field-string="link_text"
+                data-field-string-format-uri="link"
+                data-placement="bottom"
               >
                 {link_text}
               </Link>
