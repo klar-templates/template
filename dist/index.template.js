@@ -87,10 +87,7 @@ function HeroTemplate(props) {
     "data-field-string": "title"
   }, title), show_button && /*#__PURE__*/React.createElement(Link, {
     to: "/sida-1",
-    className: "button text-on-primary text-white bg-primary dark:bg-primary-dark",
-    "data-field-string": "link_text",
-    "data-field-string-format-uri": "link",
-    "data-placement": "bottom"
+    className: "button text-on-primary text-white bg-primary dark:bg-primary-dark"
   }, link_text))), /*#__PURE__*/React.createElement("div", {
     className: "background"
   })), /*#__PURE__*/React.createElement("div", {
