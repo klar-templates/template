@@ -10,7 +10,7 @@ export default function FooterTemplate(props) {
     image,
   } = props.block;
   return (
-    <footer className="text-center lg:text-left">
+    <footer id={_id} className="text-center lg:text-left">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-3">
           <div>

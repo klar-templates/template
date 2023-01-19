@@ -3,6 +3,7 @@ window.templateJs = "";
 
 function TemplateHero(props) {
   const {
+    _id,
     title,
     subtitle
   } = props.block;
@@ -19,6 +20,7 @@ function TemplateHero(props) {
   // const Link = KlarLink;
   // console.log(KlarComponents);
   return /*#__PURE__*/React.createElement(Section, {
+    id: _id,
     className: "dark bg-slate-900"
   }, /*#__PURE__*/React.createElement(Container, null, /*#__PURE__*/React.createElement("div", {
     className: "text-center mx-auto max-w-3xl px:4 sm:px-16 pb-32 pt-20 sm:pt-40 sm:pb-48 dark:text-neutral-50"
@@ -177,6 +179,7 @@ function FooterTemplate(props) {
     image
   } = props.block;
   return /*#__PURE__*/React.createElement("footer", {
+    id: _id,
     className: "text-center lg:text-left"
   }, /*#__PURE__*/React.createElement(Container, null, /*#__PURE__*/React.createElement("div", {
     className: "grid grid-cols-1 lg:grid-cols-3"

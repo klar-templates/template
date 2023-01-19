@@ -173,20 +173,20 @@
       .mx-auto{margin-left:auto;margin-right:auto}
       .my-8{margin-top:2rem;margin-bottom:2rem}
       .my-auto{margin-top:auto;margin-bottom:auto}
-      .mb-4{margin-bottom:1rem}
-      .mb-8{margin-bottom:2rem}
-      .mb-2{margin-bottom:0.5rem}
-      .mt-4{margin-top:1rem}
-      .mr-4{margin-right:1rem}
       .mt-6{margin-top:1.5rem}
       .mt-8{margin-top:2rem}
       .ml-1{margin-left:0.25rem}
+      .mb-4{margin-bottom:1rem}
+      .mb-2{margin-bottom:0.5rem}
+      .mt-4{margin-top:1rem}
+      .mr-4{margin-right:1rem}
       .mt-10{margin-top:2.5rem}
       .mb-0{margin-bottom:0px}
       .mt-2{margin-top:0.5rem}
       .mt-12{margin-top:3rem}
       .mt-\[50px\]{margin-top:50px}
       .mt-3{margin-top:0.75rem}
+      .mb-8{margin-bottom:2rem}
       .block{display:block}
       .flex{display:flex}
       .inline-flex{display:inline-flex}
@@ -241,13 +241,13 @@
       .border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity))}
       .border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity))}
       .border-neutral-200{--tw-border-opacity:1;border-color:rgb(var(--neutral-200) / var(--tw-border-opacity))}
-      .bg-primary{--tw-bg-opacity:1;background-color:rgb(var(--primary-500) / var(--tw-bg-opacity))}
+      .bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity))}
       .bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}
       .bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity))}
-      .bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity))}
       .bg-neutral-100{--tw-bg-opacity:1;background-color:rgb(var(--neutral-100) / var(--tw-bg-opacity))}
       .bg-primary\/0{background-color:rgb(var(--primary-500) / 0)}
       .bg-slate-900\/75{background-color:rgb(15 23 42 / 0.75)}
+      .bg-primary{--tw-bg-opacity:1;background-color:rgb(var(--primary-500) / var(--tw-bg-opacity))}
       .object-cover{object-fit:cover}
       .p-2\.5{padding:0.625rem}
       .p-2{padding:0.5rem}
@@ -255,56 +255,56 @@
       .p-4{padding:1rem}
       .p-6{padding:1.5rem}
       .py-6{padding-top:1.5rem;padding-bottom:1.5rem}
-      .py-3{padding-top:0.75rem;padding-bottom:0.75rem}
+      .py-20{padding-top:5rem;padding-bottom:5rem}
       .px-4{padding-left:1rem;padding-right:1rem}
+      .py-3{padding-top:0.75rem;padding-bottom:0.75rem}
       .px-6{padding-left:1.5rem;padding-right:1.5rem}
       .py-5{padding-top:1.25rem;padding-bottom:1.25rem}
-      .py-20{padding-top:5rem;padding-bottom:5rem}
       .py-4{padding-top:1rem;padding-bottom:1rem}
-      .pb-16{padding-bottom:4rem}
+      .pb-32{padding-bottom:8rem}
       .pt-20{padding-top:5rem}
       .pb-\[56\.25\%\]{padding-bottom:56.25%}
       .pb-1{padding-bottom:0.25rem}
       .pt-\[10\.125rem\]{padding-top:10.125rem}
-      .pb-32{padding-bottom:8rem}
       .pb-2{padding-bottom:0.5rem}
       .pb-8{padding-bottom:2rem}
+      .pb-16{padding-bottom:4rem}
       .text-center{text-align:center}
       .text-right{text-align:right}
       .font-logo{font-family:var(--font-logo), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"}
       .font-display{font-family:var(--font-display), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"}
       .font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
       .text-2xl{font-size:1.5rem;line-height:2rem}
-      .text-xl{font-size:1.25rem;line-height:1.75rem}
       .text-4xl{font-size:2.25rem;line-height:2.5rem}
+      .text-lg{font-size:1.125rem;line-height:1.75rem}
       .text-sm{font-size:0.875rem;line-height:1.25rem}
       .text-xs{font-size:0.75rem;line-height:1rem}
-      .text-lg{font-size:1.125rem;line-height:1.75rem}
       .text-base{font-size:1rem;line-height:1.5rem}
+      .text-xl{font-size:1.25rem;line-height:1.75rem}
       .font-bold{font-weight:700}
       .font-semibold{font-weight:600}
       .font-medium{font-weight:500}
       .uppercase{text-transform:uppercase}
       .italic{font-style:italic}
+      .leading-8{line-height:2rem}
+      .leading-\[1\.312rem\]{line-height:1.312rem}
       .leading-tight{line-height:1.25}
       .leading-5{line-height:1.25rem}
       .leading-6{line-height:1.5rem}
-      .leading-8{line-height:2rem}
-      .leading-\[1\.312rem\]{line-height:1.312rem}
       .leading-7{line-height:1.75rem}
       .tracking-tight{letter-spacing:-0.025em}
       .text-primary{--tw-text-opacity:1;color:rgb(var(--primary-500) / var(--tw-text-opacity))}
       .text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity))}
       .text-neutral-900{--tw-text-opacity:1;color:rgb(var(--neutral-900) / var(--tw-text-opacity))}
-      .text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}
+      .text-neutral-700{--tw-text-opacity:1;color:rgb(var(--neutral-700) / var(--tw-text-opacity))}
       .text-primary-700{--tw-text-opacity:1;color:rgb(var(--primary-700) / var(--tw-text-opacity))}
       .text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity))}
       .text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity))}
       .text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity))}
       .text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity))}
-      .text-neutral-700{--tw-text-opacity:1;color:rgb(var(--neutral-700) / var(--tw-text-opacity))}
       .text-neutral-500{--tw-text-opacity:1;color:rgb(var(--neutral-500) / var(--tw-text-opacity))}
       .text-neutral-100\/0{color:rgb(var(--neutral-100) / 0)}
+      .text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}
       .shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}
       .shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}
       .ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}
@@ -323,6 +323,8 @@
       .hover\:text-primary:hover{--tw-text-opacity:1;color:rgb(var(--primary-500) / var(--tw-text-opacity))}
 
       .hover\:text-primary-900:hover{--tw-text-opacity:1;color:rgb(var(--primary-900) / var(--tw-text-opacity))}
+
+      .hover\:text-neutral-700:hover{--tw-text-opacity:1;color:rgb(var(--neutral-700) / var(--tw-text-opacity))}
 
       .hover\:text-neutral-100\/100:hover{color:rgb(var(--neutral-100) / 1)}
 
@@ -352,13 +354,13 @@
 
       .dark .dark\:text-neutral-200{--tw-text-opacity:1;color:rgb(var(--neutral-200) / var(--tw-text-opacity))}
 
+      .dark .dark\:text-neutral-50{--tw-text-opacity:1;color:rgb(var(--neutral-50) / var(--tw-text-opacity))}
+
       .dark .dark\:text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity))}
 
       .dark .dark\:text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240 / var(--tw-text-opacity))}
 
       .dark .dark\:text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity))}
-
-      .dark .dark\:text-neutral-50{--tw-text-opacity:1;color:rgb(var(--neutral-50) / var(--tw-text-opacity))}
 
       .dark .dark\:text-neutral-100{--tw-text-opacity:1;color:rgb(var(--neutral-100) / var(--tw-text-opacity))}
 
@@ -378,17 +380,17 @@
 .sm\:w-8{width:2rem}
 .sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}
 .sm\:justify-center{justify-content:center}
-.sm\:py-4{padding-top:1rem;padding-bottom:1rem}
-.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}
-.sm\:py-9{padding-top:2.25rem;padding-bottom:2.25rem}
 .sm\:py-32{padding-top:8rem;padding-bottom:8rem}
+.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}
 .sm\:px-16{padding-left:4rem;padding-right:4rem}
+.sm\:py-4{padding-top:1rem;padding-bottom:1rem}
+.sm\:py-9{padding-top:2.25rem;padding-bottom:2.25rem}
 .sm\:pt-40{padding-top:10rem}
 .sm\:pb-48{padding-bottom:12rem}
 .sm\:text-center{text-align:center}
-.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}
 .sm\:text-6xl{font-size:3.75rem;line-height:1}
-.sm\:text-5xl{font-size:3rem;line-height:1}}
+.sm\:text-5xl{font-size:3rem;line-height:1}
+.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}}
 
       @media (min-width: 768px){
 .md\:mb-6{margin-bottom:1.5rem}
@@ -420,19 +422,19 @@
 .lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}
 .lg\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}
 .lg\:gap-8{gap:2rem}
-.lg\:py-\[170px\]{padding-top:170px;padding-bottom:170px}
 .lg\:px-8{padding-left:2rem;padding-right:2rem}
 .lg\:py-6{padding-top:1.5rem;padding-bottom:1.5rem}
+.lg\:py-\[170px\]{padding-top:170px;padding-bottom:170px}
 .lg\:text-left{text-align:left}
 .lg\:text-center{text-align:center}
 .lg\:text-right{text-align:right}
 .lg\:text-3xl{font-size:1.875rem;line-height:2.25rem}
+.lg\:text-2xl{font-size:1.5rem;line-height:2rem}
 .lg\:text-4xl{font-size:2.25rem;line-height:2.5rem}
+.lg\:text-xl{font-size:1.25rem;line-height:1.75rem}
 .lg\:text-\[40px\]{font-size:40px}
 .lg\:text-7xl{font-size:4.5rem;line-height:1}
-.lg\:text-\[75px\]{font-size:75px}
-.lg\:text-2xl{font-size:1.5rem;line-height:2rem}
-.lg\:text-xl{font-size:1.25rem;line-height:1.75rem}}
+.lg\:text-\[75px\]{font-size:75px}}
 
       @media (min-width: 1280px){
 .xl\:col-span-6{grid-column:span 6 / span 6}

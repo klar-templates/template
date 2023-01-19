@@ -1,5 +1,5 @@
 export default function TemplateHero(props) {
-  const {title, subtitle} = props.block;
+  const {_id, title, subtitle} = props.block;
   const {Section, Container, Button, Link} = props.ui;
   // console.log('props', props.ui);
   // const Section = KlarComponents.Section;
@@ -8,7 +8,7 @@ export default function TemplateHero(props) {
   // const Link = KlarLink;
   // console.log(KlarComponents);
   return (
-    <Section className="dark bg-slate-900">
+    <Section id={_id} className="dark bg-slate-900">
       <Container>
         <div className="text-center mx-auto max-w-3xl px:4 sm:px-16 pb-32 pt-20 sm:pt-40 sm:pb-48 dark:text-neutral-50">
           <h1 className="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">{title}</h1>
