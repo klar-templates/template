@@ -1,5 +1,10 @@
 (function () {
   window.runTemplateScript = function () {
+    if (typeof parent.frames.window.klar !== 'undefined') {
+      if (!(parent.frames && parent.frames.window.document.body.classList.contains('page-preview'))) {
+        return;
+      }
+    }
     const onePageHeaderSelector = '.one-page-header';
     // Activate Bootstrap scrollspy on the main nav element
     const mainNav = document.body.querySelector(onePageHeaderSelector);
