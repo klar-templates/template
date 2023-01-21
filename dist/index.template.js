@@ -1,5 +1,5 @@
 (function () {
-window.templateJs = "";
+window.templateJs = "(function () {\n  window.runTemplateScript = function () {\n    const onePageHeaderSelector = '.one-page-header';\n    // Activate Bootstrap scrollspy on the main nav element\n    const mainNav = document.body.querySelector(onePageHeaderSelector);\n    if (mainNav) {\n      new bootstrap.ScrollSpy(document.documentElement, {\n        target: onePageHeaderSelector,\n        // smoothScroll: true,\n        // rootMargin: '0px 0px -25%',\n        // offset: 68,\n        // threshold: [0.1, 0.5, 1]\n      });\n    };\n\n    // Navbar shrink function\n    var navbarShrink = function () {\n      const navbarCollapsible = document.body.querySelector(onePageHeaderSelector);\n      if (!navbarCollapsible) {\n          return;\n      }\n      if (window.scrollY === 0) {\n          navbarCollapsible.classList.remove('navbar-shrink')\n      } else {\n          navbarCollapsible.classList.add('navbar-shrink')\n      }\n    };\n\n    // Shrink the navbar \n    navbarShrink();\n\n    // Shrink the navbar when page is scrolled\n    document.addEventListener('scroll', navbarShrink);\n  }\n})();";
 
 function TemplateHero(props) {
   const {

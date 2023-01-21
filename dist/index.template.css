@@ -37,17 +37,22 @@
       audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}
       img,video{max-width:100%;height:auto}
       [hidden]{display:none}
+      @media (prefers-reduced-motion: no-preference) {
+          :root {
+            scroll-behavior: smooth;
+          }
+        }
       html {
           font-family: var(--font-body), system-ui, -apple-system, BlinkMacSystemFont,
             'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
             'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
             'Noto Color Emoji';
+          scroll-padding-top: 68px;
         }
       body {
           background-color: var(--bg-color);
           color: rgb(var(--neutral-900));
           font-size: var(--text-base-size)px;
-          position: relative;
         }
       .dark body {
           color: rgb(var(--neutral-50));
@@ -153,6 +158,19 @@
             opacity: 0;
           }
         }
+      /* One page website */
+      .one-page-header{position:fixed !important;width:100%;
+          top: 0;
+          right: 0;
+          left: 0;
+          transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out}
+      .one-page-header.navbar-shrink {
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+          background-color: #212529;
+        }
+      .one-page-header a.active{list-style-type:none;white-space:nowrap;font-weight:600;--tw-text-opacity:1;color:rgb(var(--primary-500) / var(--tw-text-opacity))}
+      .dark .one-page-header a.active{--tw-text-opacity:1;color:rgb(var(--primary-500) / var(--tw-text-opacity))}
       .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border-width:0}
       .pointer-events-none{pointer-events:none}
       .invisible{visibility:hidden}
