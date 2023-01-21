@@ -13,12 +13,6 @@
       @tailwind utilities;
 
       @layer base {
-        /* @media (prefers-reduced-motion: no-preference) {
-          :root {
-            scroll-behavior: smooth;
-          }
-        } */
-        
         html {
           font-family: var(--font-body), system-ui, -apple-system, BlinkMacSystemFont,
             'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
@@ -52,6 +46,12 @@
 
         section a {
           color: rgb(var(--primary-500));
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+          :root {
+            scroll-behavior: smooth;
+          }
         }
       }
 
