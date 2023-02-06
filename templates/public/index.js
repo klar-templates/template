@@ -1,5 +1,6 @@
 (function () {
   window.runTemplateScript = function () {
+    console.log('runTemplateScript');
     if (typeof parent.frames.window.klar !== 'undefined') {
       if (!(parent.frames && parent.frames.window.document.body.classList.contains('page-preview'))) {
         return;
